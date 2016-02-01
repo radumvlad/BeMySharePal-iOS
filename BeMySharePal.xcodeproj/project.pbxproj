@@ -1,0 +1,307 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		17016D821C6005AB00F95DAE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 17016D811C6005AB00F95DAE /* main.m */; };
+		17016D851C6005AB00F95DAE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17016D841C6005AB00F95DAE /* AppDelegate.m */; };
+		17016D881C6005AB00F95DAE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17016D871C6005AB00F95DAE /* ViewController.m */; };
+		17016D8B1C6005AB00F95DAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17016D891C6005AB00F95DAE /* Main.storyboard */; };
+		17016D8D1C6005AB00F95DAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17016D8C1C6005AB00F95DAE /* Assets.xcassets */; };
+		17016D901C6005AB00F95DAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17016D8E1C6005AB00F95DAE /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		17016D7D1C6005AB00F95DAE /* BeMySharePal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeMySharePal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		17016D811C6005AB00F95DAE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		17016D831C6005AB00F95DAE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		17016D841C6005AB00F95DAE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		17016D861C6005AB00F95DAE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		17016D871C6005AB00F95DAE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		17016D8A1C6005AB00F95DAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		17016D8C1C6005AB00F95DAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		17016D8F1C6005AB00F95DAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		17016D911C6005AB00F95DAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		17016D7A1C6005AB00F95DAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		17016D741C6005AB00F95DAE = {
+			isa = PBXGroup;
+			children = (
+				17016D7F1C6005AB00F95DAE /* BeMySharePal */,
+				17016D7E1C6005AB00F95DAE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		17016D7E1C6005AB00F95DAE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				17016D7D1C6005AB00F95DAE /* BeMySharePal.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		17016D7F1C6005AB00F95DAE /* BeMySharePal */ = {
+			isa = PBXGroup;
+			children = (
+				17016D831C6005AB00F95DAE /* AppDelegate.h */,
+				17016D841C6005AB00F95DAE /* AppDelegate.m */,
+				17016D861C6005AB00F95DAE /* ViewController.h */,
+				17016D871C6005AB00F95DAE /* ViewController.m */,
+				17016D891C6005AB00F95DAE /* Main.storyboard */,
+				17016D8C1C6005AB00F95DAE /* Assets.xcassets */,
+				17016D8E1C6005AB00F95DAE /* LaunchScreen.storyboard */,
+				17016D911C6005AB00F95DAE /* Info.plist */,
+				17016D801C6005AB00F95DAE /* Supporting Files */,
+			);
+			path = BeMySharePal;
+			sourceTree = "<group>";
+		};
+		17016D801C6005AB00F95DAE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				17016D811C6005AB00F95DAE /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		17016D7C1C6005AB00F95DAE /* BeMySharePal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17016D941C6005AB00F95DAE /* Build configuration list for PBXNativeTarget "BeMySharePal" */;
+			buildPhases = (
+				17016D791C6005AB00F95DAE /* Sources */,
+				17016D7A1C6005AB00F95DAE /* Frameworks */,
+				17016D7B1C6005AB00F95DAE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BeMySharePal;
+			productName = BeMySharePal;
+			productReference = 17016D7D1C6005AB00F95DAE /* BeMySharePal.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		17016D751C6005AB00F95DAE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = FMI;
+				TargetAttributes = {
+					17016D7C1C6005AB00F95DAE = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 17016D781C6005AB00F95DAE /* Build configuration list for PBXProject "BeMySharePal" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 17016D741C6005AB00F95DAE;
+			productRefGroup = 17016D7E1C6005AB00F95DAE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				17016D7C1C6005AB00F95DAE /* BeMySharePal */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		17016D7B1C6005AB00F95DAE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17016D901C6005AB00F95DAE /* LaunchScreen.storyboard in Resources */,
+				17016D8D1C6005AB00F95DAE /* Assets.xcassets in Resources */,
+				17016D8B1C6005AB00F95DAE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		17016D791C6005AB00F95DAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17016D881C6005AB00F95DAE /* ViewController.m in Sources */,
+				17016D851C6005AB00F95DAE /* AppDelegate.m in Sources */,
+				17016D821C6005AB00F95DAE /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		17016D891C6005AB00F95DAE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				17016D8A1C6005AB00F95DAE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		17016D8E1C6005AB00F95DAE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				17016D8F1C6005AB00F95DAE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		17016D921C6005AB00F95DAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		17016D931C6005AB00F95DAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		17016D951C6005AB00F95DAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BeMySharePal/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fmi.share.BeMySharePal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		17016D961C6005AB00F95DAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BeMySharePal/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fmi.share.BeMySharePal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		17016D781C6005AB00F95DAE /* Build configuration list for PBXProject "BeMySharePal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17016D921C6005AB00F95DAE /* Debug */,
+				17016D931C6005AB00F95DAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17016D941C6005AB00F95DAE /* Build configuration list for PBXNativeTarget "BeMySharePal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17016D951C6005AB00F95DAE /* Debug */,
+				17016D961C6005AB00F95DAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 17016D751C6005AB00F95DAE /* Project object */;
+}
