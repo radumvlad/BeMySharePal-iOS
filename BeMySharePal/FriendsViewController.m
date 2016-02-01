@@ -6,13 +6,13 @@
 //  Copyright © 2016 FMI. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "FriendsViewController.h"
 
-@interface ViewController ()
+@interface FriendsViewController ()
 
 @end
 
-@implementation ViewController
+@implementation FriendsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
