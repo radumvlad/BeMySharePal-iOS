@@ -1,1 +1,2 @@
 pod 'SSKeychain'
+pod 'MGSwipeTableCell'

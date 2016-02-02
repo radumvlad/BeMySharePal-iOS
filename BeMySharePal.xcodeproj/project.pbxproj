@@ -16,6 +16,9 @@
 		17016D991C60228A00F95DAE /* LocalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17016D981C60228A00F95DAE /* LocalViewController.m */; };
 		17016D9D1C6022AC00F95DAE /* NetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17016D9C1C6022AC00F95DAE /* NetworkViewController.m */; };
 		17016DA11C6022BD00F95DAE /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17016DA01C6022BD00F95DAE /* SettingsViewController.m */; };
+		17016DA61C60284B00F95DAE /* FriendsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 17016DA51C60284B00F95DAE /* FriendsTableViewCell.m */; };
+		17016DB01C602D0000F95DAE /* LocalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 17016DAF1C602D0000F95DAE /* LocalTableViewCell.m */; };
+		17016DB41C602E2100F95DAE /* NetworkTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 17016DB31C602E2100F95DAE /* NetworkTableViewCell.m */; };
 		3E284F6F3E04FFCA2CBE316D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 230785CF3CD44B261EB4EC0F /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +39,12 @@
 		17016D9C1C6022AC00F95DAE /* NetworkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkViewController.m; sourceTree = "<group>"; };
 		17016D9F1C6022BD00F95DAE /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		17016DA01C6022BD00F95DAE /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		17016DA41C60284B00F95DAE /* FriendsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsTableViewCell.h; sourceTree = "<group>"; };
+		17016DA51C60284B00F95DAE /* FriendsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsTableViewCell.m; sourceTree = "<group>"; };
+		17016DAE1C602D0000F95DAE /* LocalTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalTableViewCell.h; sourceTree = "<group>"; };
+		17016DAF1C602D0000F95DAE /* LocalTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalTableViewCell.m; sourceTree = "<group>"; };
+		17016DB21C602E2100F95DAE /* NetworkTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkTableViewCell.h; sourceTree = "<group>"; };
+		17016DB31C602E2100F95DAE /* NetworkTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkTableViewCell.m; sourceTree = "<group>"; };
 		230785CF3CD44B261EB4EC0F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		32B0F416D9988DA3C5534986 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		3A9EAAFF235A62456A756FFA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -97,16 +106,78 @@
 		17016D9A1C60228F00F95DAE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				17016DA71C602A1200F95DAE /* Friends */,
+				17016DA81C602A1E00F95DAE /* Local */,
+				17016DA91C602A2500F95DAE /* Network */,
+				17016DAA1C602A2E00F95DAE /* Settings */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		17016DA71C602A1200F95DAE /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				17016DAB1C602A3A00F95DAE /* Views */,
 				17016D861C6005AB00F95DAE /* FriendsViewController.h */,
 				17016D871C6005AB00F95DAE /* FriendsViewController.m */,
+			);
+			name = Friends;
+			sourceTree = "<group>";
+		};
+		17016DA81C602A1E00F95DAE /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				17016DAC1C602C5800F95DAE /* Views */,
 				17016D971C60228A00F95DAE /* LocalViewController.h */,
 				17016D981C60228A00F95DAE /* LocalViewController.m */,
+			);
+			name = Local;
+			sourceTree = "<group>";
+		};
+		17016DA91C602A2500F95DAE /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				17016DB11C602E1300F95DAE /* Views */,
 				17016D9B1C6022AC00F95DAE /* NetworkViewController.h */,
 				17016D9C1C6022AC00F95DAE /* NetworkViewController.m */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		17016DAA1C602A2E00F95DAE /* Settings */ = {
+			isa = PBXGroup;
+			children = (
 				17016D9F1C6022BD00F95DAE /* SettingsViewController.h */,
 				17016DA01C6022BD00F95DAE /* SettingsViewController.m */,
 			);
-			name = ViewControllers;
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		17016DAB1C602A3A00F95DAE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				17016DA41C60284B00F95DAE /* FriendsTableViewCell.h */,
+				17016DA51C60284B00F95DAE /* FriendsTableViewCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		17016DAC1C602C5800F95DAE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				17016DAE1C602D0000F95DAE /* LocalTableViewCell.h */,
+				17016DAF1C602D0000F95DAE /* LocalTableViewCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		17016DB11C602E1300F95DAE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				17016DB21C602E2100F95DAE /* NetworkTableViewCell.h */,
+				17016DB31C602E2100F95DAE /* NetworkTableViewCell.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		55B8FFE6F19AB1107FB552A9 /* Frameworks */ = {
@@ -249,8 +320,11 @@
 			files = (
 				17016D881C6005AB00F95DAE /* FriendsViewController.m in Sources */,
 				17016D851C6005AB00F95DAE /* AppDelegate.m in Sources */,
+				17016DA61C60284B00F95DAE /* FriendsTableViewCell.m in Sources */,
 				17016D991C60228A00F95DAE /* LocalViewController.m in Sources */,
 				17016DA11C6022BD00F95DAE /* SettingsViewController.m in Sources */,
+				17016DB41C602E2100F95DAE /* NetworkTableViewCell.m in Sources */,
+				17016DB01C602D0000F95DAE /* LocalTableViewCell.m in Sources */,
 				17016D821C6005AB00F95DAE /* main.m in Sources */,
 				17016D9D1C6022AC00F95DAE /* NetworkViewController.m in Sources */,
 			);
@@ -386,7 +460,7 @@
 					"-framework",
 					"\"Security\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.fmi.share.BeMySharePal;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fmi.BeMySharePal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -417,7 +491,7 @@
 					"-framework",
 					"\"Security\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.fmi.share.BeMySharePal;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fmi.BeMySharePal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

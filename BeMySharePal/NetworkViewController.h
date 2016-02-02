@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NetworkTableViewCell.h"
 
-@interface NetworkViewController : UIViewController
+@interface NetworkViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
