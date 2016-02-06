@@ -7,32 +7,52 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0405C528F25DF571F654E2BCEA1FEB6E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0307982621563C439755B9BC0ED60A1A /* Foundation.framework */; };
-		0965F532B1D323B1DD073186EB650607 /* MGSwipeTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 870D54AB60C5E6D133700D16913406CF /* MGSwipeTableCell.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		32B716737210460A0F4EFDA65561A7CA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60FA6CD62EB7A9C85C7DBBA20924D70A /* Security.framework */; };
-		3BEBCAEDE2830DD8D60E646B0A3E8046 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0307982621563C439755B9BC0ED60A1A /* Foundation.framework */; };
-		5020D7EFE7A0F5ED14901F4D4BC3E94E /* SSKeychain.h in Headers */ = {isa = PBXBuildFile; fileRef = 559A329C1F2CBC1FAD776522D49C8D11 /* SSKeychain.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		627C702143DC5871810C774521DF7D6D /* MGSwipeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B416B98B50D6B20A6CF3F34A4312D18 /* MGSwipeButton.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		6C6F002C4ACEDC5BF1FCCEAE4E47A48D /* MGSwipeTableCell-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BE5097833B10369A7A484BA25292CAC1 /* MGSwipeTableCell-dummy.m */; };
-		7493C72CF44FFB321675790ADB9C2593 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0307982621563C439755B9BC0ED60A1A /* Foundation.framework */; };
-		87E1EB5B5167AA853598A03CD84536EC /* SSKeychainQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C79979BDB2BB0F45ABFC243D2C4DEEC /* SSKeychainQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		98DF3D79D58A2D0C1B7EBC28B04BE5B9 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 28611C3BDBCCC87723F008EF48523852 /* SSKeychain.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		9C591574031C5736D5717DAE572FC359 /* MGSwipeButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 50404DCA10A1E08BA7B084D90FFCB876 /* MGSwipeButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9D4C81D4EF2C721AE0CC3C734556E0C5 /* SSKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BDF8C048027CD09BC83CC7BB0555AEB /* SSKeychainQuery.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		A4D1B31EA69CB7D41FEC7A02825CA553 /* SSKeychain-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FD34A1D9343D68747692D68BB222F61 /* SSKeychain-dummy.m */; };
-		CFE557E5D4945FFFC747CA9C6F07B74D /* MGSwipeTableCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 3219C837AD1674C7BC2D9DEA382C1CFF /* MGSwipeTableCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D103804F63CFC50D39F1BF7CC9970D38 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 272643F56613CA0D336AE3DBF19DC404 /* Pods-dummy.m */; };
+		01AE8AADB82668BFE29C50CB222E637D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E967D042C48D5885583D70105EF16526 /* Security.framework */; };
+		06791D00FA62C98DF6814A6C691DDC0A /* SSKeychain-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 78254D2DC36B9F26BB66C44AEDD593AF /* SSKeychain-dummy.m */; };
+		06D2ACB9CE33A4488D297BC948E66A0D /* GCDAsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 76B2D377593E7C98A7389DEBAEDD80DB /* GCDAsyncUdpSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0965F532B1D323B1DD073186EB650607 /* MGSwipeTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B3044F1B7796C7FEDF2DEBED6237B9CC /* MGSwipeTableCell.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		2E2E1FDDD9C63D92915CF771E353872D /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 272643F56613CA0D336AE3DBF19DC404 /* Pods-dummy.m */; };
+		34711A0ACEBB6351E2717EE5703B88C2 /* SSKeychainQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = B229059A293C086D9A2C4C2B58402041 /* SSKeychainQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		349941F689A2F118D63CDB9F773C5C9C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED316EE84B1D3AAE415457D92E62A3A0 /* CFNetwork.framework */; };
+		350D9EEAA564EBC6AD06BD0A30960F1F /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FE1CA61AEC944CD185334B9191B6FA /* AsyncUdpSocket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		3A470C1A4575E0423B418339C3A967DE /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C7E1FBAF75529E0DD701F17A0CC2DA7 /* GCDAsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		463F6DB636698F3DEDAB0F34E8566E09 /* AsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EF7C8A5B6D71E1FFFD525E31FFDD0C8 /* AsyncUdpSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		627C702143DC5871810C774521DF7D6D /* MGSwipeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 356F7B1C5C3D305593F0BE1D9F6886C8 /* MGSwipeButton.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		6A29C637AB89EE076DA6249983CDE1E4 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = AE2D60452CDB1F352CBB5BCFFC193F20 /* SSKeychain.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		6C6F002C4ACEDC5BF1FCCEAE4E47A48D /* MGSwipeTableCell-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0295CF3F5521DFD79B34B58471F859CA /* MGSwipeTableCell-dummy.m */; };
+		6D91FF378F7DABBE76EB9F122DEB517D /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D84116202AC088AEC9024E4CDC6570 /* GCDAsyncSocket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		7493C72CF44FFB321675790ADB9C2593 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBC51718377FC85475D865A171A8B5CC /* Foundation.framework */; };
+		8523A06471E1C30D6EA21D9E59B755D9 /* AsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 21DE809C698D8C8E0245D61EAED7C9FE /* AsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8A46BE9F8482FBBCBF876D0C51F5C9D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBC51718377FC85475D865A171A8B5CC /* Foundation.framework */; };
+		9305AA3B0F72E4E5B93ABE37071096AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBC51718377FC85475D865A171A8B5CC /* Foundation.framework */; };
+		9BBC14779408194043C420817A2CB6BA /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA019C04D18AA7711BAD843CC28EA6 /* GCDAsyncUdpSocket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		9C591574031C5736D5717DAE572FC359 /* MGSwipeButton.h in Headers */ = {isa = PBXBuildFile; fileRef = D8B42A1DE62F591D41881E02F6BDB906 /* MGSwipeButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F29A5F39A5D5410483C10BAA02D728D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E967D042C48D5885583D70105EF16526 /* Security.framework */; };
+		A7BBBD7F944D0E0984A861ADC7B0EAF3 /* SSKeychain.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D72F153B4DF75BCB0EAD5A579EF3C69 /* SSKeychain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B28A05AA3FE4207D0F5D63CAFDD172F8 /* SSKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 65871E1DB8349C4353CF444FC01D8566 /* SSKeychainQuery.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		C38DE79AE2AC674F6E8FF0B89624A68F /* CocoaAsyncSocket-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CF3A305F41AC701848111DD28C60E33D /* CocoaAsyncSocket-dummy.m */; };
+		C818115DB1B052E9667EC2506421BE39 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBC51718377FC85475D865A171A8B5CC /* Foundation.framework */; };
+		CFE557E5D4945FFFC747CA9C6F07B74D /* MGSwipeTableCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 03E86F5B6D231E1FFF5531021ABF9F28 /* MGSwipeTableCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E18F00D7D1DD05B7C16F46B5FF77F234 /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC6FAF168B80E87FE5E429630278A90 /* AsyncSocket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F4C939A2793BE48660A5A1DE56325AD2 /* CocoaAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = F80E48C40D81AEA49B106CF6F85DC222 /* CocoaAsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		44CC6052E727BF728181FD8517E0B69D /* PBXContainerItemProxy */ = {
+		3920E1A1D5CF3E4317DD4DC421A9355F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AD7F77CA36D0A4D7864A471576FC306E;
+			remoteGlobalIDString = 90551F2BE83AC470BACCE24E72A57E8D;
 			remoteInfo = SSKeychain;
 		};
-		5048A808586D781E256212E33F510BA7 /* PBXContainerItemProxy */ = {
+		6BBF94308A44145ACD5413203E45B2C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ECFE0958DDB7FEC79B3AA1C9337BC941;
+			remoteInfo = CocoaAsyncSocket;
+		};
+		7DA2D8048EFDC5279D1E571C2D67E8CC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -42,36 +62,58 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0307982621563C439755B9BC0ED60A1A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		05E6CB208AB38255FEC4C7627B567BD1 /* libSSKeychain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSSKeychain.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		0C79979BDB2BB0F45ABFC243D2C4DEEC /* SSKeychainQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSKeychainQuery.h; path = SSKeychain/SSKeychainQuery.h; sourceTree = "<group>"; };
-		0FD34A1D9343D68747692D68BB222F61 /* SSKeychain-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SSKeychain-dummy.m"; sourceTree = "<group>"; };
+		0295CF3F5521DFD79B34B58471F859CA /* MGSwipeTableCell-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MGSwipeTableCell-dummy.m"; sourceTree = "<group>"; };
+		03E86F5B6D231E1FFF5531021ABF9F28 /* MGSwipeTableCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MGSwipeTableCell.h; path = MGSwipeTableCell/MGSwipeTableCell.h; sourceTree = "<group>"; };
+		0E7EB285F1358C54CCF37D0C4DA9B8A3 /* SSKeychain-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SSKeychain-prefix.pch"; sourceTree = "<group>"; };
 		10834806BD7B412BC24F347361FA2C8E /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
-		1BDF8C048027CD09BC83CC7BB0555AEB /* SSKeychainQuery.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SSKeychainQuery.m; path = SSKeychain/SSKeychainQuery.m; sourceTree = "<group>"; };
+		14FE1CA61AEC944CD185334B9191B6FA /* AsyncUdpSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AsyncUdpSocket.m; path = Source/RunLoop/AsyncUdpSocket.m; sourceTree = "<group>"; };
+		19F8367BE04111F56A54C22901E64279 /* MGSwipeTableCell.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MGSwipeTableCell.xcconfig; sourceTree = "<group>"; };
+		1EF7C8A5B6D71E1FFFD525E31FFDD0C8 /* AsyncUdpSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AsyncUdpSocket.h; path = Source/RunLoop/AsyncUdpSocket.h; sourceTree = "<group>"; };
+		21DE809C698D8C8E0245D61EAED7C9FE /* AsyncSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AsyncSocket.h; path = Source/RunLoop/AsyncSocket.h; sourceTree = "<group>"; };
+		24D84116202AC088AEC9024E4CDC6570 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncSocket.m; path = Source/GCD/GCDAsyncSocket.m; sourceTree = "<group>"; };
 		272643F56613CA0D336AE3DBF19DC404 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
-		28611C3BDBCCC87723F008EF48523852 /* SSKeychain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SSKeychain.m; path = SSKeychain/SSKeychain.m; sourceTree = "<group>"; };
-		3219C837AD1674C7BC2D9DEA382C1CFF /* MGSwipeTableCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MGSwipeTableCell.h; path = MGSwipeTableCell/MGSwipeTableCell.h; sourceTree = "<group>"; };
+		2C05E33C1E6E6A32DD0195200FE5F73C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DFA019C04D18AA7711BAD843CC28EA6 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncUdpSocket.m; path = Source/GCD/GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
+		2E29ECA4BB7F34574CC3EBD38585741E /* libCocoaAsyncSocket.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCocoaAsyncSocket.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3013BAF99B1665C8EC2F640E75C4E8FB /* SSKeychain.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SSKeychain.xcconfig; sourceTree = "<group>"; };
+		356F7B1C5C3D305593F0BE1D9F6886C8 /* MGSwipeButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MGSwipeButton.m; path = MGSwipeTableCell/MGSwipeButton.m; sourceTree = "<group>"; };
 		37DB56D75062CC75FCB0966E1C6E8A8E /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
-		3B416B98B50D6B20A6CF3F34A4312D18 /* MGSwipeButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MGSwipeButton.m; path = MGSwipeTableCell/MGSwipeButton.m; sourceTree = "<group>"; };
-		4848DC373BC41EAD5D24A7EC8F9836C5 /* libMGSwipeTableCell.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMGSwipeTableCell.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E53CBA81CAE94BF29E0D12D0B57BD6D /* CocoaAsyncSocket.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaAsyncSocket.xcconfig; sourceTree = "<group>"; };
+		428E463B1795E3E664FAF66F836BE1A8 /* CocoaAsyncSocket-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaAsyncSocket-prefix.pch"; sourceTree = "<group>"; };
 		4E762F23EC34ED4A6FF3312D84E33A40 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
-		50404DCA10A1E08BA7B084D90FFCB876 /* MGSwipeButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MGSwipeButton.h; path = MGSwipeTableCell/MGSwipeButton.h; sourceTree = "<group>"; };
-		533356418C06146A3FECF001871F67BD /* SSKeychain-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SSKeychain-prefix.pch"; sourceTree = "<group>"; };
-		559A329C1F2CBC1FAD776522D49C8D11 /* SSKeychain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSKeychain.h; path = SSKeychain/SSKeychain.h; sourceTree = "<group>"; };
-		60FA6CD62EB7A9C85C7DBBA20924D70A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		65871E1DB8349C4353CF444FC01D8566 /* SSKeychainQuery.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SSKeychainQuery.m; path = SSKeychain/SSKeychainQuery.m; sourceTree = "<group>"; };
 		6911BECA35E7518D864239B7E898EEF3 /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
-		6C98B07EC6FA1192E37174293357EE91 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		870D54AB60C5E6D133700D16913406CF /* MGSwipeTableCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MGSwipeTableCell.m; path = MGSwipeTableCell/MGSwipeTableCell.m; sourceTree = "<group>"; };
-		8D43A95FF946A7A355BD9E7AA17E7447 /* MGSwipeTableCell-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MGSwipeTableCell-prefix.pch"; sourceTree = "<group>"; };
+		76B2D377593E7C98A7389DEBAEDD80DB /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncUdpSocket.h; path = Source/GCD/GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		78254D2DC36B9F26BB66C44AEDD593AF /* SSKeychain-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SSKeychain-dummy.m"; sourceTree = "<group>"; };
+		7D72F153B4DF75BCB0EAD5A579EF3C69 /* SSKeychain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSKeychain.h; path = SSKeychain/SSKeychain.h; sourceTree = "<group>"; };
+		7D82E5833CEE8A8476217419751FA728 /* libSSKeychain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSSKeychain.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C7E1FBAF75529E0DD701F17A0CC2DA7 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncSocket.h; path = Source/GCD/GCDAsyncSocket.h; sourceTree = "<group>"; };
 		98C98CDFB3F20F2925F6CD1F141BB14F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
 		A1A36D34413696BE466E2CA0AFF194DA /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		AE2D60452CDB1F352CBB5BCFFC193F20 /* SSKeychain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SSKeychain.m; path = SSKeychain/SSKeychain.m; sourceTree = "<group>"; };
+		B229059A293C086D9A2C4C2B58402041 /* SSKeychainQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSKeychainQuery.h; path = SSKeychain/SSKeychainQuery.h; sourceTree = "<group>"; };
+		B3044F1B7796C7FEDF2DEBED6237B9CC /* MGSwipeTableCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MGSwipeTableCell.m; path = MGSwipeTableCell/MGSwipeTableCell.m; sourceTree = "<group>"; };
+		B57C3A6127407CFEEBACBF4ABAF0C60D /* libMGSwipeTableCell.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMGSwipeTableCell.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BE5097833B10369A7A484BA25292CAC1 /* MGSwipeTableCell-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MGSwipeTableCell-dummy.m"; sourceTree = "<group>"; };
-		C1E6E85F2227DCFD6DC9D743AFC776BE /* SSKeychain.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SSKeychain.xcconfig; sourceTree = "<group>"; };
-		FA73250776285355DA9A997C71B8F053 /* MGSwipeTableCell.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MGSwipeTableCell.xcconfig; sourceTree = "<group>"; };
+		CBC51718377FC85475D865A171A8B5CC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CDC6FAF168B80E87FE5E429630278A90 /* AsyncSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AsyncSocket.m; path = Source/RunLoop/AsyncSocket.m; sourceTree = "<group>"; };
+		CF3A305F41AC701848111DD28C60E33D /* CocoaAsyncSocket-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CocoaAsyncSocket-dummy.m"; sourceTree = "<group>"; };
+		D8B42A1DE62F591D41881E02F6BDB906 /* MGSwipeButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MGSwipeButton.h; path = MGSwipeTableCell/MGSwipeButton.h; sourceTree = "<group>"; };
+		E967D042C48D5885583D70105EF16526 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		ED316EE84B1D3AAE415457D92E62A3A0 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		F4EC927FF79DBAAA6E4E8C8B45054642 /* MGSwipeTableCell-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MGSwipeTableCell-prefix.pch"; sourceTree = "<group>"; };
+		F80E48C40D81AEA49B106CF6F85DC222 /* CocoaAsyncSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CocoaAsyncSocket.h; path = Source/CocoaAsyncSocket.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		69C9D670B207C00F7B4713D75972C7B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9305AA3B0F72E4E5B93ABE37071096AD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A416129FD9357EDAB628A67D6F930151 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -80,26 +122,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A42D691CBF296A94D63270EF98077C66 /* Frameworks */ = {
+		CF9667CD3ACDD0BA5A5E788FAB03C953 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0405C528F25DF571F654E2BCEA1FEB6E /* Foundation.framework in Frameworks */,
-				32B716737210460A0F4EFDA65561A7CA /* Security.framework in Frameworks */,
+				349941F689A2F118D63CDB9F773C5C9C /* CFNetwork.framework in Frameworks */,
+				8A46BE9F8482FBBCBF876D0C51F5C9D8 /* Foundation.framework in Frameworks */,
+				01AE8AADB82668BFE29C50CB222E637D /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BF9471B94B3026AF98C707F137B37E37 /* Frameworks */ = {
+		DD6F074E1DCA2ABF0C9BB0671E53C172 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BEBCAEDE2830DD8D60E646B0A3E8046 /* Foundation.framework in Frameworks */,
+				C818115DB1B052E9667EC2506421BE39 /* Foundation.framework in Frameworks */,
+				9F29A5F39A5D5410483C10BAA02D728D /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02961A04E11AFE43485A31AC0E407FE7 /* SSKeychain */ = {
+			isa = PBXGroup;
+			children = (
+				7D72F153B4DF75BCB0EAD5A579EF3C69 /* SSKeychain.h */,
+				AE2D60452CDB1F352CBB5BCFFC193F20 /* SSKeychain.m */,
+				B229059A293C086D9A2C4C2B58402041 /* SSKeychainQuery.h */,
+				65871E1DB8349C4353CF444FC01D8566 /* SSKeychainQuery.m */,
+				4DC1C5D44491559AD6B7C119EE3D6F84 /* Support Files */,
+			);
+			path = SSKeychain;
+			sourceTree = "<group>";
+		};
 		037C0CA694176A3C0915F62C9D20B3E6 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,82 +164,91 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		27FE876531DFFE0B84ED732C29EFC01E /* Products */ = {
+		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4848DC373BC41EAD5D24A7EC8F9836C5 /* libMGSwipeTableCell.a */,
-				6C98B07EC6FA1192E37174293357EE91 /* libPods.a */,
-				05E6CB208AB38255FEC4C7627B567BD1 /* libSSKeychain.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		3ED1F2A0DFC2A50F06189CE06EA4A74A /* MGSwipeTableCell */ = {
-			isa = PBXGroup;
-			children = (
-				50404DCA10A1E08BA7B084D90FFCB876 /* MGSwipeButton.h */,
-				3B416B98B50D6B20A6CF3F34A4312D18 /* MGSwipeButton.m */,
-				3219C837AD1674C7BC2D9DEA382C1CFF /* MGSwipeTableCell.h */,
-				870D54AB60C5E6D133700D16913406CF /* MGSwipeTableCell.m */,
-				A963ACA19D739C02D907D49EF60BD0D8 /* Support Files */,
-			);
-			path = MGSwipeTableCell;
-			sourceTree = "<group>";
-		};
-		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5A86A7991AF0B723B7571D408852AEBF /* iOS */,
+				B728418FA3338AB680410C5B26CF547F /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5A86A7991AF0B723B7571D408852AEBF /* iOS */ = {
+		216634915288A5DC14E2EA668AB2721F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				0307982621563C439755B9BC0ED60A1A /* Foundation.framework */,
-				60FA6CD62EB7A9C85C7DBBA20924D70A /* Security.framework */,
+				77EC668B244DB0FDAA130EDB92C09944 /* CocoaAsyncSocket */,
+				B77ACB770D316CC50626ADBDE2DC766D /* MGSwipeTableCell */,
+				02961A04E11AFE43485A31AC0E407FE7 /* SSKeychain */,
 			);
-			name = iOS;
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		48BA7FD6FCB2B3F39932B5A87EA83514 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3E53CBA81CAE94BF29E0D12D0B57BD6D /* CocoaAsyncSocket.xcconfig */,
+				CF3A305F41AC701848111DD28C60E33D /* CocoaAsyncSocket-dummy.m */,
+				428E463B1795E3E664FAF66F836BE1A8 /* CocoaAsyncSocket-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CocoaAsyncSocket";
+			sourceTree = "<group>";
+		};
+		4DC1C5D44491559AD6B7C119EE3D6F84 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3013BAF99B1665C8EC2F640E75C4E8FB /* SSKeychain.xcconfig */,
+				78254D2DC36B9F26BB66C44AEDD593AF /* SSKeychain-dummy.m */,
+				0E7EB285F1358C54CCF37D0C4DA9B8A3 /* SSKeychain-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SSKeychain";
+			sourceTree = "<group>";
+		};
+		6F25EA652C31442E24CE8CDE1BE3790A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2E29ECA4BB7F34574CC3EBD38585741E /* libCocoaAsyncSocket.a */,
+				B57C3A6127407CFEEBACBF4ABAF0C60D /* libMGSwipeTableCell.a */,
+				2C05E33C1E6E6A32DD0195200FE5F73C /* libPods.a */,
+				7D82E5833CEE8A8476217419751FA728 /* libSSKeychain.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		77EC668B244DB0FDAA130EDB92C09944 /* CocoaAsyncSocket */ = {
+			isa = PBXGroup;
+			children = (
+				21DE809C698D8C8E0245D61EAED7C9FE /* AsyncSocket.h */,
+				CDC6FAF168B80E87FE5E429630278A90 /* AsyncSocket.m */,
+				1EF7C8A5B6D71E1FFFD525E31FFDD0C8 /* AsyncUdpSocket.h */,
+				14FE1CA61AEC944CD185334B9191B6FA /* AsyncUdpSocket.m */,
+				F80E48C40D81AEA49B106CF6F85DC222 /* CocoaAsyncSocket.h */,
+				8C7E1FBAF75529E0DD701F17A0CC2DA7 /* GCDAsyncSocket.h */,
+				24D84116202AC088AEC9024E4CDC6570 /* GCDAsyncSocket.m */,
+				76B2D377593E7C98A7389DEBAEDD80DB /* GCDAsyncUdpSocket.h */,
+				2DFA019C04D18AA7711BAD843CC28EA6 /* GCDAsyncUdpSocket.m */,
+				48BA7FD6FCB2B3F39932B5A87EA83514 /* Support Files */,
+			);
+			path = CocoaAsyncSocket;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
-				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				934A9AA55C1F35782E8F2E6488EC3914 /* Pods */,
-				27FE876531DFFE0B84ED732C29EFC01E /* Products */,
+				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
+				216634915288A5DC14E2EA668AB2721F /* Pods */,
+				6F25EA652C31442E24CE8CDE1BE3790A /* Products */,
 				037C0CA694176A3C0915F62C9D20B3E6 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		8B6C3120FB7AB155D1229720BAB5EA31 /* Support Files */ = {
+		80F56828517C4DA2BC71928E64C4E139 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				C1E6E85F2227DCFD6DC9D743AFC776BE /* SSKeychain.xcconfig */,
-				0FD34A1D9343D68747692D68BB222F61 /* SSKeychain-dummy.m */,
-				533356418C06146A3FECF001871F67BD /* SSKeychain-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SSKeychain";
-			sourceTree = "<group>";
-		};
-		934A9AA55C1F35782E8F2E6488EC3914 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				3ED1F2A0DFC2A50F06189CE06EA4A74A /* MGSwipeTableCell */,
-				CDCB58D865A4CF785A758657E6B8ED2E /* SSKeychain */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		A963ACA19D739C02D907D49EF60BD0D8 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				FA73250776285355DA9A997C71B8F053 /* MGSwipeTableCell.xcconfig */,
-				BE5097833B10369A7A484BA25292CAC1 /* MGSwipeTableCell-dummy.m */,
-				8D43A95FF946A7A355BD9E7AA17E7447 /* MGSwipeTableCell-prefix.pch */,
+				19F8367BE04111F56A54C22901E64279 /* MGSwipeTableCell.xcconfig */,
+				0295CF3F5521DFD79B34B58471F859CA /* MGSwipeTableCell-dummy.m */,
+				F4EC927FF79DBAAA6E4E8C8B45054642 /* MGSwipeTableCell-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/MGSwipeTableCell";
@@ -204,16 +269,26 @@
 			path = "Target Support Files/Pods";
 			sourceTree = "<group>";
 		};
-		CDCB58D865A4CF785A758657E6B8ED2E /* SSKeychain */ = {
+		B728418FA3338AB680410C5B26CF547F /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				559A329C1F2CBC1FAD776522D49C8D11 /* SSKeychain.h */,
-				28611C3BDBCCC87723F008EF48523852 /* SSKeychain.m */,
-				0C79979BDB2BB0F45ABFC243D2C4DEEC /* SSKeychainQuery.h */,
-				1BDF8C048027CD09BC83CC7BB0555AEB /* SSKeychainQuery.m */,
-				8B6C3120FB7AB155D1229720BAB5EA31 /* Support Files */,
+				ED316EE84B1D3AAE415457D92E62A3A0 /* CFNetwork.framework */,
+				CBC51718377FC85475D865A171A8B5CC /* Foundation.framework */,
+				E967D042C48D5885583D70105EF16526 /* Security.framework */,
 			);
-			path = SSKeychain;
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		B77ACB770D316CC50626ADBDE2DC766D /* MGSwipeTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				D8B42A1DE62F591D41881E02F6BDB906 /* MGSwipeButton.h */,
+				356F7B1C5C3D305593F0BE1D9F6886C8 /* MGSwipeButton.m */,
+				03E86F5B6D231E1FFF5531021ABF9F28 /* MGSwipeTableCell.h */,
+				B3044F1B7796C7FEDF2DEBED6237B9CC /* MGSwipeTableCell.m */,
+				80F56828517C4DA2BC71928E64C4E139 /* Support Files */,
+			);
+			path = MGSwipeTableCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,18 +303,49 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7D29B1776C123B62AED2F0D444C51A9F /* Headers */ = {
+		69A690CE3231C3D12E916510E227770D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5020D7EFE7A0F5ED14901F4D4BC3E94E /* SSKeychain.h in Headers */,
-				87E1EB5B5167AA853598A03CD84536EC /* SSKeychainQuery.h in Headers */,
+				8523A06471E1C30D6EA21D9E59B755D9 /* AsyncSocket.h in Headers */,
+				463F6DB636698F3DEDAB0F34E8566E09 /* AsyncUdpSocket.h in Headers */,
+				F4C939A2793BE48660A5A1DE56325AD2 /* CocoaAsyncSocket.h in Headers */,
+				3A470C1A4575E0423B418339C3A967DE /* GCDAsyncSocket.h in Headers */,
+				06D2ACB9CE33A4488D297BC948E66A0D /* GCDAsyncUdpSocket.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8598C8199A4C013B040C31AB4B01A41 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7BBBD7F944D0E0984A861ADC7B0EAF3 /* SSKeychain.h in Headers */,
+				34711A0ACEBB6351E2717EE5703B88C2 /* SSKeychainQuery.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		1500D46ADB280392556105BA2F3B574B /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11EA4FCA482D28CED11B0A8FA89AECBA /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				D7C3B934604158FB9CB940F2DFD79D48 /* Sources */,
+				69C9D670B207C00F7B4713D75972C7B5 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6FF4E5A903EFF2EF2AD6C9DB0BA9ACCC /* PBXTargetDependency */,
+				7024EAFB974F466A44DC6FA170E96BD1 /* PBXTargetDependency */,
+				F6B4DA556520C671F45DBFD22A61F073 /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = 2C05E33C1E6E6A32DD0195200FE5F73C /* libPods.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		8C463CD491D989B457394A7AA95384BC /* MGSwipeTableCell */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7A8B27F02A10D0E2B6D204B097EF2104 /* Build configuration list for PBXNativeTarget "MGSwipeTableCell" */;
@@ -254,34 +360,16 @@
 			);
 			name = MGSwipeTableCell;
 			productName = MGSwipeTableCell;
-			productReference = 4848DC373BC41EAD5D24A7EC8F9836C5 /* libMGSwipeTableCell.a */;
+			productReference = B57C3A6127407CFEEBACBF4ABAF0C60D /* libMGSwipeTableCell.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		8C7BF138D59BDFF68F3FCEF77B1935CB /* Pods */ = {
+		90551F2BE83AC470BACCE24E72A57E8D /* SSKeychain */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B1FF71398998A827B8F3F8E67B5D4F9E /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildConfigurationList = 4DD68C0C6FFC5CAEBA12F35DE1820503 /* Build configuration list for PBXNativeTarget "SSKeychain" */;
 			buildPhases = (
-				E1BFF01876C1303AC056695B0C49552F /* Sources */,
-				BF9471B94B3026AF98C707F137B37E37 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B65E0387EB4B89569F30201E79343418 /* PBXTargetDependency */,
-				59212FC675616146298A17E92BDEEC74 /* PBXTargetDependency */,
-			);
-			name = Pods;
-			productName = Pods;
-			productReference = 6C98B07EC6FA1192E37174293357EE91 /* libPods.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		AD7F77CA36D0A4D7864A471576FC306E /* SSKeychain */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 211B17A3896CBB02BFD437A4BDFCBD9E /* Build configuration list for PBXNativeTarget "SSKeychain" */;
-			buildPhases = (
-				1F7DAB0FB3B413590B2758361CE180C9 /* Sources */,
-				A42D691CBF296A94D63270EF98077C66 /* Frameworks */,
-				7D29B1776C123B62AED2F0D444C51A9F /* Headers */,
+				402A70001E65F2284F093F7FCD5CFFA8 /* Sources */,
+				DD6F074E1DCA2ABF0C9BB0671E53C172 /* Frameworks */,
+				C8598C8199A4C013B040C31AB4B01A41 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -289,7 +377,24 @@
 			);
 			name = SSKeychain;
 			productName = SSKeychain;
-			productReference = 05E6CB208AB38255FEC4C7627B567BD1 /* libSSKeychain.a */;
+			productReference = 7D82E5833CEE8A8476217419751FA728 /* libSSKeychain.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		ECFE0958DDB7FEC79B3AA1C9337BC941 /* CocoaAsyncSocket */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7483CB10FF36BE3A36788130D611FF51 /* Build configuration list for PBXNativeTarget "CocoaAsyncSocket" */;
+			buildPhases = (
+				AC878CD0AFC70E240F0625958332767B /* Sources */,
+				CF9667CD3ACDD0BA5A5E788FAB03C953 /* Frameworks */,
+				69A690CE3231C3D12E916510E227770D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CocoaAsyncSocket;
+			productName = CocoaAsyncSocket;
+			productReference = 2E29ECA4BB7F34574CC3EBD38585741E /* libCocoaAsyncSocket.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -309,25 +414,26 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 27FE876531DFFE0B84ED732C29EFC01E /* Products */;
+			productRefGroup = 6F25EA652C31442E24CE8CDE1BE3790A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				ECFE0958DDB7FEC79B3AA1C9337BC941 /* CocoaAsyncSocket */,
 				8C463CD491D989B457394A7AA95384BC /* MGSwipeTableCell */,
-				8C7BF138D59BDFF68F3FCEF77B1935CB /* Pods */,
-				AD7F77CA36D0A4D7864A471576FC306E /* SSKeychain */,
+				1500D46ADB280392556105BA2F3B574B /* Pods */,
+				90551F2BE83AC470BACCE24E72A57E8D /* SSKeychain */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1F7DAB0FB3B413590B2758361CE180C9 /* Sources */ = {
+		402A70001E65F2284F093F7FCD5CFFA8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4D1B31EA69CB7D41FEC7A02825CA553 /* SSKeychain-dummy.m in Sources */,
-				98DF3D79D58A2D0C1B7EBC28B04BE5B9 /* SSKeychain.m in Sources */,
-				9D4C81D4EF2C721AE0CC3C734556E0C5 /* SSKeychainQuery.m in Sources */,
+				06791D00FA62C98DF6814A6C691DDC0A /* SSKeychain-dummy.m in Sources */,
+				6A29C637AB89EE076DA6249983CDE1E4 /* SSKeychain.m in Sources */,
+				B28A05AA3FE4207D0F5D63CAFDD172F8 /* SSKeychainQuery.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,79 +447,63 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E1BFF01876C1303AC056695B0C49552F /* Sources */ = {
+		AC878CD0AFC70E240F0625958332767B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D103804F63CFC50D39F1BF7CC9970D38 /* Pods-dummy.m in Sources */,
+				E18F00D7D1DD05B7C16F46B5FF77F234 /* AsyncSocket.m in Sources */,
+				350D9EEAA564EBC6AD06BD0A30960F1F /* AsyncUdpSocket.m in Sources */,
+				C38DE79AE2AC674F6E8FF0B89624A68F /* CocoaAsyncSocket-dummy.m in Sources */,
+				6D91FF378F7DABBE76EB9F122DEB517D /* GCDAsyncSocket.m in Sources */,
+				9BBC14779408194043C420817A2CB6BA /* GCDAsyncUdpSocket.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7C3B934604158FB9CB940F2DFD79D48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E2E1FDDD9C63D92915CF771E353872D /* Pods-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		59212FC675616146298A17E92BDEEC74 /* PBXTargetDependency */ = {
+		6FF4E5A903EFF2EF2AD6C9DB0BA9ACCC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = SSKeychain;
-			target = AD7F77CA36D0A4D7864A471576FC306E /* SSKeychain */;
-			targetProxy = 44CC6052E727BF728181FD8517E0B69D /* PBXContainerItemProxy */;
+			name = CocoaAsyncSocket;
+			target = ECFE0958DDB7FEC79B3AA1C9337BC941 /* CocoaAsyncSocket */;
+			targetProxy = 6BBF94308A44145ACD5413203E45B2C1 /* PBXContainerItemProxy */;
 		};
-		B65E0387EB4B89569F30201E79343418 /* PBXTargetDependency */ = {
+		7024EAFB974F466A44DC6FA170E96BD1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MGSwipeTableCell;
 			target = 8C463CD491D989B457394A7AA95384BC /* MGSwipeTableCell */;
-			targetProxy = 5048A808586D781E256212E33F510BA7 /* PBXContainerItemProxy */;
+			targetProxy = 7DA2D8048EFDC5279D1E571C2D67E8CC /* PBXContainerItemProxy */;
+		};
+		F6B4DA556520C671F45DBFD22A61F073 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SSKeychain;
+			target = 90551F2BE83AC470BACCE24E72A57E8D /* SSKeychain */;
+			targetProxy = 3920E1A1D5CF3E4317DD4DC421A9355F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		06076463CC2B2316442938B45845810D /* Debug */ = {
+		32F5C539A70E8D3C029B86F039CAA32A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4E762F23EC34ED4A6FF3312D84E33A40 /* Pods.debug.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		485E3B870F5B3EE2E34D46443B968864 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C1E6E85F2227DCFD6DC9D743AFC776BE /* SSKeychain.xcconfig */;
+			baseConfigurationReference = 3013BAF99B1665C8EC2F640E75C4E8FB /* SSKeychain.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/SSKeychain/SSKeychain-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		A6C9BDBEA4FCE40294BF66BBE26158F8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 98C98CDFB3F20F2925F6CD1F141BB14F /* Pods.release.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
@@ -458,14 +548,31 @@
 			};
 			name = Debug;
 		};
-		B3E4DAFC172A09A291046524603568F3 /* Release */ = {
+		B5B180B3B40CA03A4F95FF915ED09046 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C1E6E85F2227DCFD6DC9D743AFC776BE /* SSKeychain.xcconfig */;
+			baseConfigurationReference = 4E762F23EC34ED4A6FF3312D84E33A40 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		BAA3AE1FEEF4EC3C095EA664FE03720D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3013BAF99B1665C8EC2F640E75C4E8FB /* SSKeychain.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/SSKeychain/SSKeychain-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -474,11 +581,11 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
 		CB5B101707EE5BF75EB170CA0034FAAF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FA73250776285355DA9A997C71B8F053 /* MGSwipeTableCell.xcconfig */;
+			baseConfigurationReference = 19F8367BE04111F56A54C22901E64279 /* MGSwipeTableCell.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/MGSwipeTableCell/MGSwipeTableCell-prefix.pch";
@@ -494,9 +601,62 @@
 			};
 			name = Debug;
 		};
+		CE3437D7B4F41CD930A86195300251BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98C98CDFB3F20F2925F6CD1F141BB14F /* Pods.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		DD1982A88C8B0F1893FF4A6D43B0A686 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E53CBA81CAE94BF29E0D12D0B57BD6D /* CocoaAsyncSocket.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		DF207FACF09F16B0A93DF3CA14981BDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E53CBA81CAE94BF29E0D12D0B57BD6D /* CocoaAsyncSocket.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		F7DD315CF9E526CD08A0CA0B6923A0D0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FA73250776285355DA9A997C71B8F053 /* MGSwipeTableCell.xcconfig */;
+			baseConfigurationReference = 19F8367BE04111F56A54C22901E64279 /* MGSwipeTableCell.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/MGSwipeTableCell/MGSwipeTableCell-prefix.pch";
@@ -549,11 +709,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		211B17A3896CBB02BFD437A4BDFCBD9E /* Build configuration list for PBXNativeTarget "SSKeychain" */ = {
+		11EA4FCA482D28CED11B0A8FA89AECBA /* Build configuration list for PBXNativeTarget "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				485E3B870F5B3EE2E34D46443B968864 /* Debug */,
-				B3E4DAFC172A09A291046524603568F3 /* Release */,
+				B5B180B3B40CA03A4F95FF915ED09046 /* Debug */,
+				CE3437D7B4F41CD930A86195300251BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -567,20 +727,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		4DD68C0C6FFC5CAEBA12F35DE1820503 /* Build configuration list for PBXNativeTarget "SSKeychain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAA3AE1FEEF4EC3C095EA664FE03720D /* Debug */,
+				32F5C539A70E8D3C029B86F039CAA32A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7483CB10FF36BE3A36788130D611FF51 /* Build configuration list for PBXNativeTarget "CocoaAsyncSocket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD1982A88C8B0F1893FF4A6D43B0A686 /* Debug */,
+				DF207FACF09F16B0A93DF3CA14981BDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		7A8B27F02A10D0E2B6D204B097EF2104 /* Build configuration list for PBXNativeTarget "MGSwipeTableCell" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CB5B101707EE5BF75EB170CA0034FAAF /* Debug */,
 				F7DD315CF9E526CD08A0CA0B6923A0D0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B1FF71398998A827B8F3F8E67B5D4F9E /* Build configuration list for PBXNativeTarget "Pods" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				06076463CC2B2316442938B45845810D /* Debug */,
-				A6C9BDBEA4FCE40294BF66BBE26158F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
