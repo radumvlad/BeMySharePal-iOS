@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#include "shamirSecretShare.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    
     return YES;
 }
 
@@ -41,5 +43,48 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    
+    
+    if ([url isFileURL]) {
+        
+        NSLog(@"New file arrived via %@", sourceApplication);
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName: NEW_FILE_NOTIFICATION object:nil];
+    }
+    
+
+    return YES;
+}
+
+- (NSArray *)divideData:(NSData *)buffData inCount:(int) numberOfDivisions {
+    
+    NSMutableArray *result = [NSMutableArray new];
+    char *secret = (char *)[buffData bytes];
+    
+    char **shares;
+    shares = split_secret(secret, 2 , numberOfDivisions);
+    
+    
+    for (int i = 0; i < numberOfDivisions; i++) {
+        
+        char *shareI = shares[i];
+        [result addObject:[NSData dataWithBytes:shareI length:strlen(shareI)]];
+    }
+    
+    return result;
+}
+
+- (NSData *)reconstructDataFrom:(NSData *)data1 and:(NSData *)data2 {
+    
+    char *share1 = (char *)[data1 bytes];
+    char *share2 = (char *)[data2 bytes];
+    
+    char *result = get_secret(share1, share2);
+    
+    return [NSData dataWithBytes:result length:strlen(result)];
+}
+
 
 @end
