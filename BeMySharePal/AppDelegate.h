@@ -7,7 +7,6 @@
 //
 
 
-#define HOST @"10.0.1.167"
 #define PORT 1234
 
 #include <ifaddrs.h>
@@ -22,7 +21,8 @@
 
 #import <UIKit/UIKit.h>
 #import <CocoaAsyncSocket/CocoaAsyncSocket.h>
-#import "ReceiveSocket.h"
+#import "IncomingSocket.h"
+#import "FriendSocket.h"
 
 
 #define NEW_FILE_NOTIFICATION @"NEW_FILE_NOTIFICATION"
@@ -32,11 +32,14 @@
 @property (strong, nonatomic) UIWindow *window;
 
 @property (strong, nonatomic) GCDAsyncSocket *serverSocket;
-@property (strong, nonatomic) NSMutableArray *receivedSockets;
+@property (strong, nonatomic) NSMutableArray *incomingParteners;
 
+@property (strong, nonatomic) NSMutableArray *friends;
 
 - (NSArray *)divideData:(NSData *)buffData inCount:(int) numberOfDivisions;
 - (NSData *)reconstructDataFrom:(NSData *)data1 and:(NSData *)data2;
+
+- (NSString *)getIPAddress:(BOOL)preferIPv4;
 
 @end
 

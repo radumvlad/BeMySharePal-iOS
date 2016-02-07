@@ -1,20 +1,11 @@
 
-// GLibFacade.h---------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------
 
-/*
- *	GLibFacade.h
- *	MultiMarkdown
- *	
- *		https://github.com/fletcher/MultiMarkdown-4/
- *
- *	Created by Daniel Jalkut on 7/26/11.
- *	Copyright 2011 __MyCompanyName__. All rights reserved.
- */
 
 #ifndef __MARKDOWN_GLIB_FACADE__
 #define __MARKDOWN_GLIB_FACADE__
 
-/* peg_markdown uses the link symbol for its own purposes */
+
 #define link MARKDOWN_LINK_IGNORED
 #include <unistd.h>
 #undef link
@@ -25,27 +16,16 @@
 typedef int gboolean;
 typedef char gchar;
 
-/* This style of bool is used in shared source code */
+
 #define FALSE false
 #define TRUE true
 
-/** @brief Minimal replacement for GLib's GString class.
- *  
- *
- * WE implement minimal mirror implementations of GLib's GString and GSList 
- * sufficient to cover the functionality required by MultiMarkdown.
- *
- * NOTE: THese are 100% clean, from-scratch implementations using only the 
- * GLib function prototype as guide for behavior.
- */
 
 typedef struct 
 {	
-	/* Current UTF8 byte stream this string represents */
+	
 	char* str;
 
-	/* Where in the str buffer will we add new characters */
-	/* or append new strings? */
 	int currentStringBufferSize;
 	int currentStringLength;
 } GString;
@@ -60,7 +40,7 @@ void g_string_prepend(GString* baseString, char* prependedString);
 
 void g_string_append_printf(GString* baseString, char* format, ...);
 
-/* Just implement a very simple singly linked list. */
+
 
 typedef struct _GSList
 {
@@ -74,40 +54,16 @@ GSList* g_slist_reverse(GSList* theList);
 
 #endif
 
-//GLibFacade.c------------------------------------------------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------------------------------------------------------------
 
-/*
- *	GLibFacade.c
- *	MultiMarkdown
- *	
- *		https://github.com/fletcher/MultiMarkdown-4/
- *
- *	Created by Daniel Jalkut on 7/26/11.
- *  Modified by Fletcher T. Penney on 9/15/11.
- *  Modified by Dan Lowe on 1/3/12.
- *	Copyright 2011 __MyCompanyName__. All rights reserved.
- */
 
-//#include "GLibFacade.h"
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <stdarg.h>
 
-/*
- * The following section came from:
- *
- *	http://lists-archives.org/mingw-users/12649-asprintf-missing-vsnprintf-
- *		behaving-differently-and-_vsncprintf-undefined.html
- *
- * and
- *
- *	http://groups.google.com/group/jansson-users/browse_thread/thread/
- *		76a88d63d9519978/041a7d0570de2d48?lnk=raot
- */
 
-/* Solaris and Windows do not provide vasprintf() or asprintf(). */
 #if defined(__WIN32) || (defined(__SVR4) && defined(__sun))
 int vasprintf( char **sptr, char *fmt, va_list argv ) 
 { 
@@ -130,7 +86,7 @@ int asprintf( char **sptr, char *fmt, ... )
 #endif
 
 
-/* GString */
+
 
 #define kStringBufferStartingSize 1024
 #define kStringBufferGrowthMultiplier 2
@@ -199,7 +155,6 @@ void g_string_append(GString* baseString, char* appendedString)
 		size_t newStringLength = baseString->currentStringLength + appendedStringLength;
 		ensureStringBufferCanHold(baseString, newStringLength);
 
-		/* We already know where the current string ends, so pass that as the starting address for strncat */
 		strncat(baseString->str + baseString->currentStringLength, appendedString, appendedStringLength);
 		baseString->currentStringLength = newStringLength;
 	}
@@ -245,7 +200,7 @@ void g_string_prepend(GString* baseString, char* prependedString)
 	}
 }
 
-/* GSList */
+
 
 void g_slist_free(GSList* ripList)
 {
@@ -254,19 +209,17 @@ void g_slist_free(GSList* ripList)
 	{
 		GSList* nextItem = thisListItem->next;
 		
-		/* I guess we don't release the data? Non-retained memory management is hard... let's figure it out later. */
 		free(thisListItem);
 		
 		thisListItem = nextItem;
 	}
 }
 
-/* Currently only used for markdown_output.c endnotes printing */
+
 GSList* g_slist_reverse(GSList* theList)
 {	
 	GSList* lastNodeSeen = NULL;
 	
-	/* Iterate the list items, tacking them on to our new reversed List as we find them */
 	GSList* listWalker = theList;
 	while (listWalker != NULL)
 	{
@@ -287,9 +240,8 @@ GSList* g_slist_prepend(GSList* targetElement, void* newElementData)
 	return newElement;
 }
 
-//strtok.h---------------------------------------------------------------------------------------------------------------------------------------------
-/* This file is only included since MINGW doesn't have strtok_r, so I can't
-   compile for Windows without this */
+//---------------------------------------------------------------------------------------------------------------------------------------------
+
 
 #include <string.h>
 
@@ -299,27 +251,8 @@ char* strtok_rr(
     char **nextp);
 
 
-// strtok.c-------------------------------------------------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------------------------------------------
 
-/* 
- * public domain strtok_r() by Charlie Gordon
- *
- *   from comp.lang.c  9/14/2007
- *
- *      http://groups.google.com/group/comp.lang.c/msg/2ab1ecbb86646684
- *
- *     (Declaration that it's public domain):
- *      http://groups.google.com/group/comp.lang.c/msg/7c7b39328fefab9c
- */
-
-/* This file is only included since MINGW doesn't have strtok_r, so I can't
-   compile for Windows without this */
-
-/* Also, fixed by Fletcher T. Penney --- added the "return NULL" when *nextp == NULL */
-
-/* This fix is also in the public domain */
-
-//#include "strtok.h"
 
 char* strtok_rr(
     char *str, 
@@ -359,38 +292,29 @@ char* strtok_rr(
 }
 
 
-//shamir.h--------------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------
 #ifndef SHAMIRS_SECRET_SHARING_H
 #define SHAMIRS_SECRET_SHARING_H
 
-//#include "strtok.h"
+
 
 #ifdef TEST
 #include "CuTest.h"
 #endif
 
-/** 
 
-@file
-
-@brief Simple library for providing SSS functionality.
-
-
-*/
-
-/// Seed the random number generator.  MUST BE CALLED before using the library (unless on arc4random() system).
 void seed_random(void);
 
-/// Given a secret, `n`, and `t`, create a list of shares (`\n` separated).
+
 char * generate_share_strings(char * secret, int n, int t);
 
-/// Given a list of shares (`\n` separated without leading whitespace), recreate the original secret.
+
 char * extract_secret_from_share_strings(const char * string);
 
 #endif
 
 
-//shamir.c--------------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------
 /*
 
 	shamir.c -- Shamir's Secret Sharing
@@ -448,19 +372,12 @@ char * extract_secret_from_share_strings(const char * string);
 #include <math.h>
 #include <unistd.h>
 
-//#include "shamir.h"
+
 
 
 static int prime = 257;	
 
 
-/*
-	http://stackoverflow.com/questions/322938/recommended-way-to-initialize-srand
-
-	http://www.concentric.net/~Ttwang/tech/inthash.htm
-	
-	Need a less predictable way to seed rand().
-*/
 
 unsigned long mix(unsigned long a, unsigned long b, unsigned long c)
 {
@@ -481,11 +398,6 @@ void seed_random(void) {
 	srand(seed);
 }
 
-/*
-	from http://stackoverflow.com/questions/18730071/c-programming-to-calculate-using-modular-exponentiation
-
-	Allows working with larger numbers (e.g. 255 shares, with a threshold of 200)
-*/
 
 int modular_exponentiation(int base,int exp,int mod)
 {
@@ -501,12 +413,6 @@ int modular_exponentiation(int base,int exp,int mod)
 
 
 
-/*
-	split_number() -- Split a number into shares
-	n = the number of shares
-	t = threshold shares to recreate the number
-*/
-
 int * split_number(int number, int n, int t) {
 	int * shares = malloc(sizeof(int)*n);
 
@@ -518,7 +424,7 @@ int * split_number(int number, int n, int t) {
 
 	for (i = 1; i < t; ++i)
 	{
-		/* Generate random coefficients -- use arc4random if available */
+		
 #if defined (HAVE_ARC4RANDOM)
 		coef[i] = arc4random_uniform(prime - 1);
 #else
@@ -530,7 +436,7 @@ int * split_number(int number, int n, int t) {
 	{
 		int y = coef[0];
 
-		/* Calculate the shares */
+		
 		for (i = 1; i < t; ++i)
 		{
 			int temp = modular_exponentiation(x+1, i, prime);
@@ -538,7 +444,7 @@ int * split_number(int number, int n, int t) {
 			y = (y + (coef[i] * temp % prime)) % prime;
 		}
 
-		/* Sometimes we're getting negative numbers, and need to fix that */
+	
 		y = (y + prime) % prime;
 
 		shares[x] = y;
@@ -554,8 +460,7 @@ void Test_split_number(CuTest* tc) {
 
 	int * test = split_number(1234, 50, 20);
 
-	//printf("Split\n1: %d\n2: %d\n3: %d\n4: %d\n5: %d\n6: %d\n", *test, *(test+1), *(test+2),
-	//	*(test+3),*(test+4),*(test+5));
+
 
 	free(test);
 
@@ -564,9 +469,6 @@ void Test_split_number(CuTest* tc) {
 #endif
 
 
-/*
-	Math stuff
-*/
 
 int * gcdD(int a, int b) {
 	int * xyz = malloc(sizeof(int) * 3);
@@ -591,9 +493,7 @@ int * gcdD(int a, int b) {
 }
 
 
-/*
-	More math stuff
-*/
+
 
 int modInverse(int k) {
 	k = k % prime;
@@ -615,11 +515,7 @@ int modInverse(int k) {
 }
 
 
-/*
-	join_shares() -- join some shares to retrieve the secret
-	xy_pairs is array of int pairs, first is x, second is y
-	n is number of pairs submitted
-*/
+
 
 int join_shares(int *xy_pairs, int n) {
 	int secret = 0;
@@ -642,7 +538,7 @@ int join_shares(int *xy_pairs, int n) {
 				nextposition = xy_pairs[j*2];
 				numerator = (numerator * -nextposition) % prime;
 				denominator = (denominator * (startposition - nextposition)) % prime;
-				//fprintf(stderr, "Num: %lli\nDen: %lli\n", numerator, denominator);
+			
 			}
 		}
 
@@ -703,12 +599,7 @@ char ** split_string(char * secret, int n, int t) {
 
 	for (i = 0; i < n; ++i)
 	{
-		/* need two characters to encode each character */
-		/* Need 4 character overhead for share # and quorum # */
-		/* Additional 2 characters are for compatibility with:
-		
-			http://www.christophedavid.org/w/c/w.php/Calculators/ShamirSecretSharing
-		*/
+	
 		shares[i] = (char *) malloc(2*len + 6 + 1);
 
 		sprintf(shares[i], "%02X%02XAA",(i+1),t);
@@ -981,9 +872,6 @@ char * extract_secret_from_share_strings(const char * string) {
 #include <stdlib.h>
 #include "shamirSecretShare.h"
 
-//#include "GLibFacade.h"
-
-//#include "shamir.h"
 
 
 char * stdin_buffer() {

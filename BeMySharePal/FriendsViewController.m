@@ -7,10 +7,12 @@
 //
 
 #import "FriendsViewController.h"
+#import "AppDelegate.h"
 
 @interface FriendsViewController ()
 
 @property (nonatomic, strong) NSArray *friendsArray;
+@property (nonatomic) UITextField *alertTextField;
 
 @end
 
@@ -19,7 +21,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.friendsArray = @[@"Friend 1", @"Friend 2", @"Friend 3"];
+    AppDelegate *appdelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    self.friendsArray = appdelegate.friends;
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    
 }
 
 
@@ -38,10 +45,39 @@
         cell = [self.tableView dequeueReusableCellWithIdentifier:@"FriendsTableViewCell"];
     }
     
-    
-    cell.titleLabel.text = self.friendsArray[indexPath.row];
+    FriendSocket *fs = self.friendsArray[indexPath.row];
+    cell.titleLabel.text = fs.host;
     
     return cell;
+}
+
+- (IBAction)addFriend:(id)sender {
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Local IP" message:@"Enter your friend's local ip address:" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok", nil];
+    alertView.alertViewStyle = UIAlertViewStylePlainTextInput;
+    
+    alertView.delegate = self;
+    
+    [alertView show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+    
+    if (buttonIndex == 1) {
+        UITextField *passwordTextField = [alertView textFieldAtIndex:0];
+        
+        FriendSocket *fs2 = [FriendSocket new];
+        fs2.host = passwordTextField.text;
+        fs2.socket = [[GCDAsyncSocket alloc] initWithDelegate:fs2 delegateQueue:dispatch_get_main_queue()];
+        
+        AppDelegate *appdelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+        [appdelegate.friends addObject:fs2];
+    }
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.tableView reloadData];
+    });
+
 }
 
 @end

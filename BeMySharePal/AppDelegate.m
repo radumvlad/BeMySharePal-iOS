@@ -19,9 +19,20 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     [self startServer];
-    self.receivedSockets = [NSMutableArray new];
+    self.incomingParteners = [NSMutableArray new];
+    
+    self.friends = [NSMutableArray new];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(incomingSocketDidDisconnect:)
+                                                 name:INCOMING_SOCKET_DISCONNECT object:nil];
     
     return YES;
+}
+
+- (void)incomingSocketDidDisconnect:(NSNotification *)notification {
+    
+    [self.incomingParteners removeObject:notification.object];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -79,13 +90,14 @@
 - (void)socket:(GCDAsyncSocket *)sender didAcceptNewSocket:(GCDAsyncSocket *)newSocket {
     NSLog(@"didAcceptNewSocket");
     
-    ReceiveSocket *receivedSocket = [ReceiveSocket new];
-    
+    IncomingSocket *receivedSocket = [IncomingSocket new];    
     receivedSocket.socket = newSocket;
     receivedSocket.socket.delegate = receivedSocket;
-    [receivedSocket.socket readDataWithTimeout:5 tag:0];
     
-    [self.receivedSockets addObject:receivedSocket];
+    [self.incomingParteners addObject:receivedSocket];
+    [receivedSocket.socket readDataWithTimeout:20 tag:0];
+    
+    
 }
 
 
@@ -170,6 +182,7 @@
         // Free memory
         freeifaddrs(interfaces);
     }
+    
     return [addresses count] ? addresses : nil;
 }
 

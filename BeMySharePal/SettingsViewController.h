@@ -8,11 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
+#import "FriendSocket.h"
 
 @interface SettingsViewController : UIViewController<GCDAsyncSocketDelegate>
 
-
 @property (weak, nonatomic) IBOutlet UILabel *label;
-@property (strong, nonatomic) GCDAsyncSocket *clientSocket;
 
 @end

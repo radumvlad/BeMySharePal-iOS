@@ -87,7 +87,7 @@
     
     cell.titleLabel.text = self.localResourcesArray[indexPath.row];
     
-    MGSwipeButton *shareButton = [MGSwipeButton buttonWithTitle:@"Share" backgroundColor:[UIColor blueColor] callback:^BOOL(MGSwipeTableCell *sender) {
+    MGSwipeButton *shareButton = [MGSwipeButton buttonWithTitle:@"Load" backgroundColor:[UIColor blueColor] callback:^BOOL(MGSwipeTableCell *sender) {
 
         NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);

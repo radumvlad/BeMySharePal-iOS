@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "NetworkTableViewCell.h"
+#import "FileModel.h"
 
 @interface NetworkViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) FileModel *currentFileModel;
 
 @end

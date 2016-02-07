@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "FriendsTableViewCell.h"
 
+
+
 @interface FriendsViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
