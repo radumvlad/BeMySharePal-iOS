@@ -8,33 +8,33 @@
 
 /* Begin PBXBuildFile section */
 		01AE8AADB82668BFE29C50CB222E637D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E967D042C48D5885583D70105EF16526 /* Security.framework */; };
-		06791D00FA62C98DF6814A6C691DDC0A /* SSKeychain-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 78254D2DC36B9F26BB66C44AEDD593AF /* SSKeychain-dummy.m */; };
-		06D2ACB9CE33A4488D297BC948E66A0D /* GCDAsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 76B2D377593E7C98A7389DEBAEDD80DB /* GCDAsyncUdpSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0965F532B1D323B1DD073186EB650607 /* MGSwipeTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B3044F1B7796C7FEDF2DEBED6237B9CC /* MGSwipeTableCell.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		06791D00FA62C98DF6814A6C691DDC0A /* SSKeychain-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 26440776472AB2DF230B55654A806F65 /* SSKeychain-dummy.m */; };
+		06D2ACB9CE33A4488D297BC948E66A0D /* GCDAsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = F15360A5F5EFC6052B13AC4311257990 /* GCDAsyncUdpSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0965F532B1D323B1DD073186EB650607 /* MGSwipeTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F750A474931931A99E2D8BD441E4B61D /* MGSwipeTableCell.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		2E2E1FDDD9C63D92915CF771E353872D /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 272643F56613CA0D336AE3DBF19DC404 /* Pods-dummy.m */; };
-		34711A0ACEBB6351E2717EE5703B88C2 /* SSKeychainQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = B229059A293C086D9A2C4C2B58402041 /* SSKeychainQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34711A0ACEBB6351E2717EE5703B88C2 /* SSKeychainQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 26E4F15AF6F40505AE9F800B20C229F5 /* SSKeychainQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		349941F689A2F118D63CDB9F773C5C9C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED316EE84B1D3AAE415457D92E62A3A0 /* CFNetwork.framework */; };
-		350D9EEAA564EBC6AD06BD0A30960F1F /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FE1CA61AEC944CD185334B9191B6FA /* AsyncUdpSocket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		3A470C1A4575E0423B418339C3A967DE /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C7E1FBAF75529E0DD701F17A0CC2DA7 /* GCDAsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		463F6DB636698F3DEDAB0F34E8566E09 /* AsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EF7C8A5B6D71E1FFFD525E31FFDD0C8 /* AsyncUdpSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		627C702143DC5871810C774521DF7D6D /* MGSwipeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 356F7B1C5C3D305593F0BE1D9F6886C8 /* MGSwipeButton.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		6A29C637AB89EE076DA6249983CDE1E4 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = AE2D60452CDB1F352CBB5BCFFC193F20 /* SSKeychain.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		6C6F002C4ACEDC5BF1FCCEAE4E47A48D /* MGSwipeTableCell-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0295CF3F5521DFD79B34B58471F859CA /* MGSwipeTableCell-dummy.m */; };
-		6D91FF378F7DABBE76EB9F122DEB517D /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D84116202AC088AEC9024E4CDC6570 /* GCDAsyncSocket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		350D9EEAA564EBC6AD06BD0A30960F1F /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = E75ACD0A01DCDFED5760A2B943AE9303 /* AsyncUdpSocket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		3A470C1A4575E0423B418339C3A967DE /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 572F54A8999D6633D35FED33E8962135 /* GCDAsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		463F6DB636698F3DEDAB0F34E8566E09 /* AsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 0449590E0D6B49F365483B25088BB9A8 /* AsyncUdpSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		627C702143DC5871810C774521DF7D6D /* MGSwipeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53CBB11F80E964E7DB05966F2FC7FE /* MGSwipeButton.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		6A29C637AB89EE076DA6249983CDE1E4 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFC297A0633AC581FCCA8F4DEA22C05 /* SSKeychain.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		6C6F002C4ACEDC5BF1FCCEAE4E47A48D /* MGSwipeTableCell-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD2EFA0808A16CAA27B88A7D0D71ED6 /* MGSwipeTableCell-dummy.m */; };
+		6D91FF378F7DABBE76EB9F122DEB517D /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 7202412E97FFD4102D4C3F1D1C31FF74 /* GCDAsyncSocket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		7493C72CF44FFB321675790ADB9C2593 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBC51718377FC85475D865A171A8B5CC /* Foundation.framework */; };
-		8523A06471E1C30D6EA21D9E59B755D9 /* AsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 21DE809C698D8C8E0245D61EAED7C9FE /* AsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8523A06471E1C30D6EA21D9E59B755D9 /* AsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 074DDA293EDEE02B6A15C1D132012835 /* AsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8A46BE9F8482FBBCBF876D0C51F5C9D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBC51718377FC85475D865A171A8B5CC /* Foundation.framework */; };
 		9305AA3B0F72E4E5B93ABE37071096AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBC51718377FC85475D865A171A8B5CC /* Foundation.framework */; };
-		9BBC14779408194043C420817A2CB6BA /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA019C04D18AA7711BAD843CC28EA6 /* GCDAsyncUdpSocket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		9C591574031C5736D5717DAE572FC359 /* MGSwipeButton.h in Headers */ = {isa = PBXBuildFile; fileRef = D8B42A1DE62F591D41881E02F6BDB906 /* MGSwipeButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9BBC14779408194043C420817A2CB6BA /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AD1E8915292F362E5EA57FC557FA6B4 /* GCDAsyncUdpSocket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		9C591574031C5736D5717DAE572FC359 /* MGSwipeButton.h in Headers */ = {isa = PBXBuildFile; fileRef = C010C592182A19D5B1E8D1BD024297C2 /* MGSwipeButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9F29A5F39A5D5410483C10BAA02D728D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E967D042C48D5885583D70105EF16526 /* Security.framework */; };
-		A7BBBD7F944D0E0984A861ADC7B0EAF3 /* SSKeychain.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D72F153B4DF75BCB0EAD5A579EF3C69 /* SSKeychain.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B28A05AA3FE4207D0F5D63CAFDD172F8 /* SSKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 65871E1DB8349C4353CF444FC01D8566 /* SSKeychainQuery.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		C38DE79AE2AC674F6E8FF0B89624A68F /* CocoaAsyncSocket-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CF3A305F41AC701848111DD28C60E33D /* CocoaAsyncSocket-dummy.m */; };
+		A7BBBD7F944D0E0984A861ADC7B0EAF3 /* SSKeychain.h in Headers */ = {isa = PBXBuildFile; fileRef = 033566B1C1A34E5ADF6F6F433BAA5C81 /* SSKeychain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B28A05AA3FE4207D0F5D63CAFDD172F8 /* SSKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BC41EA0301B8FE770F352B70F90941 /* SSKeychainQuery.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		C38DE79AE2AC674F6E8FF0B89624A68F /* CocoaAsyncSocket-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D76FCE742D33A639C62A053C366C505 /* CocoaAsyncSocket-dummy.m */; };
 		C818115DB1B052E9667EC2506421BE39 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBC51718377FC85475D865A171A8B5CC /* Foundation.framework */; };
-		CFE557E5D4945FFFC747CA9C6F07B74D /* MGSwipeTableCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 03E86F5B6D231E1FFF5531021ABF9F28 /* MGSwipeTableCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E18F00D7D1DD05B7C16F46B5FF77F234 /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC6FAF168B80E87FE5E429630278A90 /* AsyncSocket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		F4C939A2793BE48660A5A1DE56325AD2 /* CocoaAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = F80E48C40D81AEA49B106CF6F85DC222 /* CocoaAsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CFE557E5D4945FFFC747CA9C6F07B74D /* MGSwipeTableCell.h in Headers */ = {isa = PBXBuildFile; fileRef = EB092742A20532BA25BE3E66CF3F2393 /* MGSwipeTableCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E18F00D7D1DD05B7C16F46B5FF77F234 /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = A48942E0D56D70F94D50F2FF441B6122 /* AsyncSocket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F4C939A2793BE48660A5A1DE56325AD2 /* CocoaAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = AE499DBE517C5733C6FBC7DA17747978 /* CocoaAsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,47 +62,49 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0295CF3F5521DFD79B34B58471F859CA /* MGSwipeTableCell-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MGSwipeTableCell-dummy.m"; sourceTree = "<group>"; };
-		03E86F5B6D231E1FFF5531021ABF9F28 /* MGSwipeTableCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MGSwipeTableCell.h; path = MGSwipeTableCell/MGSwipeTableCell.h; sourceTree = "<group>"; };
-		0E7EB285F1358C54CCF37D0C4DA9B8A3 /* SSKeychain-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SSKeychain-prefix.pch"; sourceTree = "<group>"; };
+		033566B1C1A34E5ADF6F6F433BAA5C81 /* SSKeychain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSKeychain.h; path = SSKeychain/SSKeychain.h; sourceTree = "<group>"; };
+		0449590E0D6B49F365483B25088BB9A8 /* AsyncUdpSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AsyncUdpSocket.h; path = Source/RunLoop/AsyncUdpSocket.h; sourceTree = "<group>"; };
+		074DDA293EDEE02B6A15C1D132012835 /* AsyncSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AsyncSocket.h; path = Source/RunLoop/AsyncSocket.h; sourceTree = "<group>"; };
 		10834806BD7B412BC24F347361FA2C8E /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
-		14FE1CA61AEC944CD185334B9191B6FA /* AsyncUdpSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AsyncUdpSocket.m; path = Source/RunLoop/AsyncUdpSocket.m; sourceTree = "<group>"; };
-		19F8367BE04111F56A54C22901E64279 /* MGSwipeTableCell.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MGSwipeTableCell.xcconfig; sourceTree = "<group>"; };
-		1EF7C8A5B6D71E1FFFD525E31FFDD0C8 /* AsyncUdpSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AsyncUdpSocket.h; path = Source/RunLoop/AsyncUdpSocket.h; sourceTree = "<group>"; };
-		21DE809C698D8C8E0245D61EAED7C9FE /* AsyncSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AsyncSocket.h; path = Source/RunLoop/AsyncSocket.h; sourceTree = "<group>"; };
-		24D84116202AC088AEC9024E4CDC6570 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncSocket.m; path = Source/GCD/GCDAsyncSocket.m; sourceTree = "<group>"; };
+		1B56293F5D3AF08B782D0B024AE5458F /* SSKeychain-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SSKeychain-prefix.pch"; sourceTree = "<group>"; };
+		22EFBC6AC82CD17BC937B9904CAA6AFC /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = iOS/Fabric.framework; sourceTree = "<group>"; };
+		26440776472AB2DF230B55654A806F65 /* SSKeychain-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SSKeychain-dummy.m"; sourceTree = "<group>"; };
+		26E4F15AF6F40505AE9F800B20C229F5 /* SSKeychainQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSKeychainQuery.h; path = SSKeychain/SSKeychainQuery.h; sourceTree = "<group>"; };
 		272643F56613CA0D336AE3DBF19DC404 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
 		2C05E33C1E6E6A32DD0195200FE5F73C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		2DFA019C04D18AA7711BAD843CC28EA6 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncUdpSocket.m; path = Source/GCD/GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
+		2C373ADB9AB9310863A28271966310CD /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = iOS/Crashlytics.framework; sourceTree = "<group>"; };
 		2E29ECA4BB7F34574CC3EBD38585741E /* libCocoaAsyncSocket.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCocoaAsyncSocket.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		3013BAF99B1665C8EC2F640E75C4E8FB /* SSKeychain.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SSKeychain.xcconfig; sourceTree = "<group>"; };
-		356F7B1C5C3D305593F0BE1D9F6886C8 /* MGSwipeButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MGSwipeButton.m; path = MGSwipeTableCell/MGSwipeButton.m; sourceTree = "<group>"; };
+		3434C56F4FD3CBDC6A7D47647FAE32B9 /* CocoaAsyncSocket.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaAsyncSocket.xcconfig; sourceTree = "<group>"; };
 		37DB56D75062CC75FCB0966E1C6E8A8E /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
-		3E53CBA81CAE94BF29E0D12D0B57BD6D /* CocoaAsyncSocket.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaAsyncSocket.xcconfig; sourceTree = "<group>"; };
-		428E463B1795E3E664FAF66F836BE1A8 /* CocoaAsyncSocket-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaAsyncSocket-prefix.pch"; sourceTree = "<group>"; };
+		4BD2EFA0808A16CAA27B88A7D0D71ED6 /* MGSwipeTableCell-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MGSwipeTableCell-dummy.m"; sourceTree = "<group>"; };
 		4E762F23EC34ED4A6FF3312D84E33A40 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
-		65871E1DB8349C4353CF444FC01D8566 /* SSKeychainQuery.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SSKeychainQuery.m; path = SSKeychain/SSKeychainQuery.m; sourceTree = "<group>"; };
+		572F54A8999D6633D35FED33E8962135 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncSocket.h; path = Source/GCD/GCDAsyncSocket.h; sourceTree = "<group>"; };
+		5D243C40FD67CE0D8281F034AB80AA0D /* CocoaAsyncSocket-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaAsyncSocket-prefix.pch"; sourceTree = "<group>"; };
+		65BC41EA0301B8FE770F352B70F90941 /* SSKeychainQuery.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SSKeychainQuery.m; path = SSKeychain/SSKeychainQuery.m; sourceTree = "<group>"; };
 		6911BECA35E7518D864239B7E898EEF3 /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
-		76B2D377593E7C98A7389DEBAEDD80DB /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncUdpSocket.h; path = Source/GCD/GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
-		78254D2DC36B9F26BB66C44AEDD593AF /* SSKeychain-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SSKeychain-dummy.m"; sourceTree = "<group>"; };
-		7D72F153B4DF75BCB0EAD5A579EF3C69 /* SSKeychain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSKeychain.h; path = SSKeychain/SSKeychain.h; sourceTree = "<group>"; };
+		6AD1E8915292F362E5EA57FC557FA6B4 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncUdpSocket.m; path = Source/GCD/GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
+		7202412E97FFD4102D4C3F1D1C31FF74 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncSocket.m; path = Source/GCD/GCDAsyncSocket.m; sourceTree = "<group>"; };
 		7D82E5833CEE8A8476217419751FA728 /* libSSKeychain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSSKeychain.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		8C7E1FBAF75529E0DD701F17A0CC2DA7 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncSocket.h; path = Source/GCD/GCDAsyncSocket.h; sourceTree = "<group>"; };
+		87696C500BEDB8AA1D84FAAAD494156F /* MGSwipeTableCell.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MGSwipeTableCell.xcconfig; sourceTree = "<group>"; };
 		98C98CDFB3F20F2925F6CD1F141BB14F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		9D76FCE742D33A639C62A053C366C505 /* CocoaAsyncSocket-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CocoaAsyncSocket-dummy.m"; sourceTree = "<group>"; };
 		A1A36D34413696BE466E2CA0AFF194DA /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
-		AE2D60452CDB1F352CBB5BCFFC193F20 /* SSKeychain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SSKeychain.m; path = SSKeychain/SSKeychain.m; sourceTree = "<group>"; };
-		B229059A293C086D9A2C4C2B58402041 /* SSKeychainQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSKeychainQuery.h; path = SSKeychain/SSKeychainQuery.h; sourceTree = "<group>"; };
-		B3044F1B7796C7FEDF2DEBED6237B9CC /* MGSwipeTableCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MGSwipeTableCell.m; path = MGSwipeTableCell/MGSwipeTableCell.m; sourceTree = "<group>"; };
+		A48942E0D56D70F94D50F2FF441B6122 /* AsyncSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AsyncSocket.m; path = Source/RunLoop/AsyncSocket.m; sourceTree = "<group>"; };
+		AC53CBB11F80E964E7DB05966F2FC7FE /* MGSwipeButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MGSwipeButton.m; path = MGSwipeTableCell/MGSwipeButton.m; sourceTree = "<group>"; };
+		AE499DBE517C5733C6FBC7DA17747978 /* CocoaAsyncSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CocoaAsyncSocket.h; path = Source/CocoaAsyncSocket.h; sourceTree = "<group>"; };
 		B57C3A6127407CFEEBACBF4ABAF0C60D /* libMGSwipeTableCell.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMGSwipeTableCell.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BC1EDEAB8DC34EA39DFC795D69555149 /* MGSwipeTableCell-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MGSwipeTableCell-prefix.pch"; sourceTree = "<group>"; };
+		BEFC297A0633AC581FCCA8F4DEA22C05 /* SSKeychain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SSKeychain.m; path = SSKeychain/SSKeychain.m; sourceTree = "<group>"; };
+		C010C592182A19D5B1E8D1BD024297C2 /* MGSwipeButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MGSwipeButton.h; path = MGSwipeTableCell/MGSwipeButton.h; sourceTree = "<group>"; };
 		CBC51718377FC85475D865A171A8B5CC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		CDC6FAF168B80E87FE5E429630278A90 /* AsyncSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AsyncSocket.m; path = Source/RunLoop/AsyncSocket.m; sourceTree = "<group>"; };
-		CF3A305F41AC701848111DD28C60E33D /* CocoaAsyncSocket-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CocoaAsyncSocket-dummy.m"; sourceTree = "<group>"; };
-		D8B42A1DE62F591D41881E02F6BDB906 /* MGSwipeButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MGSwipeButton.h; path = MGSwipeTableCell/MGSwipeButton.h; sourceTree = "<group>"; };
+		E0E945753DF2E9CD12913387E9D259E9 /* SSKeychain.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SSKeychain.xcconfig; sourceTree = "<group>"; };
+		E75ACD0A01DCDFED5760A2B943AE9303 /* AsyncUdpSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AsyncUdpSocket.m; path = Source/RunLoop/AsyncUdpSocket.m; sourceTree = "<group>"; };
 		E967D042C48D5885583D70105EF16526 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		EB092742A20532BA25BE3E66CF3F2393 /* MGSwipeTableCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MGSwipeTableCell.h; path = MGSwipeTableCell/MGSwipeTableCell.h; sourceTree = "<group>"; };
 		ED316EE84B1D3AAE415457D92E62A3A0 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
-		F4EC927FF79DBAAA6E4E8C8B45054642 /* MGSwipeTableCell-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MGSwipeTableCell-prefix.pch"; sourceTree = "<group>"; };
-		F80E48C40D81AEA49B106CF6F85DC222 /* CocoaAsyncSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CocoaAsyncSocket.h; path = Source/CocoaAsyncSocket.h; sourceTree = "<group>"; };
+		F15360A5F5EFC6052B13AC4311257990 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncUdpSocket.h; path = Source/GCD/GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		F750A474931931A99E2D8BD441E4B61D /* MGSwipeTableCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MGSwipeTableCell.m; path = MGSwipeTableCell/MGSwipeTableCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,18 +146,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		02961A04E11AFE43485A31AC0E407FE7 /* SSKeychain */ = {
-			isa = PBXGroup;
-			children = (
-				7D72F153B4DF75BCB0EAD5A579EF3C69 /* SSKeychain.h */,
-				AE2D60452CDB1F352CBB5BCFFC193F20 /* SSKeychain.m */,
-				B229059A293C086D9A2C4C2B58402041 /* SSKeychainQuery.h */,
-				65871E1DB8349C4353CF444FC01D8566 /* SSKeychainQuery.m */,
-				4DC1C5D44491559AD6B7C119EE3D6F84 /* Support Files */,
-			);
-			path = SSKeychain;
-			sourceTree = "<group>";
-		};
 		037C0CA694176A3C0915F62C9D20B3E6 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,36 +162,114 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		216634915288A5DC14E2EA668AB2721F /* Pods */ = {
+		1BBA31BF3AADFA0F682CD4022819B0C0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				77EC668B244DB0FDAA130EDB92C09944 /* CocoaAsyncSocket */,
-				B77ACB770D316CC50626ADBDE2DC766D /* MGSwipeTableCell */,
-				02961A04E11AFE43485A31AC0E407FE7 /* SSKeychain */,
+				6D6EA20469F30296C806895E427888BD /* CocoaAsyncSocket */,
+				E492EC9BF90C12274F6E9CF9585C1065 /* Crashlytics */,
+				2A2224A0953C2466653EF88F775B70AE /* Fabric */,
+				3C567D6551EAE4C809BEF8FEB449A2CC /* MGSwipeTableCell */,
+				5E77613742F7A1073FA84CDAA5968580 /* SSKeychain */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		48BA7FD6FCB2B3F39932B5A87EA83514 /* Support Files */ = {
+		2A2224A0953C2466653EF88F775B70AE /* Fabric */ = {
 			isa = PBXGroup;
 			children = (
-				3E53CBA81CAE94BF29E0D12D0B57BD6D /* CocoaAsyncSocket.xcconfig */,
-				CF3A305F41AC701848111DD28C60E33D /* CocoaAsyncSocket-dummy.m */,
-				428E463B1795E3E664FAF66F836BE1A8 /* CocoaAsyncSocket-prefix.pch */,
+				6DE880AF2BA766007849EB788E5BA0DE /* Frameworks */,
+			);
+			path = Fabric;
+			sourceTree = "<group>";
+		};
+		3927DDFE71CC7B31C5870ABDB942E7B5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				87696C500BEDB8AA1D84FAAAD494156F /* MGSwipeTableCell.xcconfig */,
+				4BD2EFA0808A16CAA27B88A7D0D71ED6 /* MGSwipeTableCell-dummy.m */,
+				BC1EDEAB8DC34EA39DFC795D69555149 /* MGSwipeTableCell-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MGSwipeTableCell";
+			sourceTree = "<group>";
+		};
+		3C567D6551EAE4C809BEF8FEB449A2CC /* MGSwipeTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				C010C592182A19D5B1E8D1BD024297C2 /* MGSwipeButton.h */,
+				AC53CBB11F80E964E7DB05966F2FC7FE /* MGSwipeButton.m */,
+				EB092742A20532BA25BE3E66CF3F2393 /* MGSwipeTableCell.h */,
+				F750A474931931A99E2D8BD441E4B61D /* MGSwipeTableCell.m */,
+				3927DDFE71CC7B31C5870ABDB942E7B5 /* Support Files */,
+			);
+			path = MGSwipeTableCell;
+			sourceTree = "<group>";
+		};
+		465F2A226BD9AE62202464843203C5B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2C373ADB9AB9310863A28271966310CD /* Crashlytics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5E77613742F7A1073FA84CDAA5968580 /* SSKeychain */ = {
+			isa = PBXGroup;
+			children = (
+				033566B1C1A34E5ADF6F6F433BAA5C81 /* SSKeychain.h */,
+				BEFC297A0633AC581FCCA8F4DEA22C05 /* SSKeychain.m */,
+				26E4F15AF6F40505AE9F800B20C229F5 /* SSKeychainQuery.h */,
+				65BC41EA0301B8FE770F352B70F90941 /* SSKeychainQuery.m */,
+				62EC92B25808871B42CF553D101CF896 /* Support Files */,
+			);
+			path = SSKeychain;
+			sourceTree = "<group>";
+		};
+		62EC92B25808871B42CF553D101CF896 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E0E945753DF2E9CD12913387E9D259E9 /* SSKeychain.xcconfig */,
+				26440776472AB2DF230B55654A806F65 /* SSKeychain-dummy.m */,
+				1B56293F5D3AF08B782D0B024AE5458F /* SSKeychain-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SSKeychain";
+			sourceTree = "<group>";
+		};
+		6973FE40C0DB09D155390A364FF36778 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3434C56F4FD3CBDC6A7D47647FAE32B9 /* CocoaAsyncSocket.xcconfig */,
+				9D76FCE742D33A639C62A053C366C505 /* CocoaAsyncSocket-dummy.m */,
+				5D243C40FD67CE0D8281F034AB80AA0D /* CocoaAsyncSocket-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/CocoaAsyncSocket";
 			sourceTree = "<group>";
 		};
-		4DC1C5D44491559AD6B7C119EE3D6F84 /* Support Files */ = {
+		6D6EA20469F30296C806895E427888BD /* CocoaAsyncSocket */ = {
 			isa = PBXGroup;
 			children = (
-				3013BAF99B1665C8EC2F640E75C4E8FB /* SSKeychain.xcconfig */,
-				78254D2DC36B9F26BB66C44AEDD593AF /* SSKeychain-dummy.m */,
-				0E7EB285F1358C54CCF37D0C4DA9B8A3 /* SSKeychain-prefix.pch */,
+				074DDA293EDEE02B6A15C1D132012835 /* AsyncSocket.h */,
+				A48942E0D56D70F94D50F2FF441B6122 /* AsyncSocket.m */,
+				0449590E0D6B49F365483B25088BB9A8 /* AsyncUdpSocket.h */,
+				E75ACD0A01DCDFED5760A2B943AE9303 /* AsyncUdpSocket.m */,
+				AE499DBE517C5733C6FBC7DA17747978 /* CocoaAsyncSocket.h */,
+				572F54A8999D6633D35FED33E8962135 /* GCDAsyncSocket.h */,
+				7202412E97FFD4102D4C3F1D1C31FF74 /* GCDAsyncSocket.m */,
+				F15360A5F5EFC6052B13AC4311257990 /* GCDAsyncUdpSocket.h */,
+				6AD1E8915292F362E5EA57FC557FA6B4 /* GCDAsyncUdpSocket.m */,
+				6973FE40C0DB09D155390A364FF36778 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/SSKeychain";
+			path = CocoaAsyncSocket;
+			sourceTree = "<group>";
+		};
+		6DE880AF2BA766007849EB788E5BA0DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				22EFBC6AC82CD17BC937B9904CAA6AFC /* Fabric.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		6F25EA652C31442E24CE8CDE1BE3790A /* Products */ = {
@@ -215,43 +283,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		77EC668B244DB0FDAA130EDB92C09944 /* CocoaAsyncSocket */ = {
-			isa = PBXGroup;
-			children = (
-				21DE809C698D8C8E0245D61EAED7C9FE /* AsyncSocket.h */,
-				CDC6FAF168B80E87FE5E429630278A90 /* AsyncSocket.m */,
-				1EF7C8A5B6D71E1FFFD525E31FFDD0C8 /* AsyncUdpSocket.h */,
-				14FE1CA61AEC944CD185334B9191B6FA /* AsyncUdpSocket.m */,
-				F80E48C40D81AEA49B106CF6F85DC222 /* CocoaAsyncSocket.h */,
-				8C7E1FBAF75529E0DD701F17A0CC2DA7 /* GCDAsyncSocket.h */,
-				24D84116202AC088AEC9024E4CDC6570 /* GCDAsyncSocket.m */,
-				76B2D377593E7C98A7389DEBAEDD80DB /* GCDAsyncUdpSocket.h */,
-				2DFA019C04D18AA7711BAD843CC28EA6 /* GCDAsyncUdpSocket.m */,
-				48BA7FD6FCB2B3F39932B5A87EA83514 /* Support Files */,
-			);
-			path = CocoaAsyncSocket;
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
-				216634915288A5DC14E2EA668AB2721F /* Pods */,
+				1BBA31BF3AADFA0F682CD4022819B0C0 /* Pods */,
 				6F25EA652C31442E24CE8CDE1BE3790A /* Products */,
 				037C0CA694176A3C0915F62C9D20B3E6 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		80F56828517C4DA2BC71928E64C4E139 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				19F8367BE04111F56A54C22901E64279 /* MGSwipeTableCell.xcconfig */,
-				0295CF3F5521DFD79B34B58471F859CA /* MGSwipeTableCell-dummy.m */,
-				F4EC927FF79DBAAA6E4E8C8B45054642 /* MGSwipeTableCell-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/MGSwipeTableCell";
 			sourceTree = "<group>";
 		};
 		B3D1D13E0C6553800746CB8FD61CF946 /* Pods */ = {
@@ -279,16 +319,12 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		B77ACB770D316CC50626ADBDE2DC766D /* MGSwipeTableCell */ = {
+		E492EC9BF90C12274F6E9CF9585C1065 /* Crashlytics */ = {
 			isa = PBXGroup;
 			children = (
-				D8B42A1DE62F591D41881E02F6BDB906 /* MGSwipeButton.h */,
-				356F7B1C5C3D305593F0BE1D9F6886C8 /* MGSwipeButton.m */,
-				03E86F5B6D231E1FFF5531021ABF9F28 /* MGSwipeTableCell.h */,
-				B3044F1B7796C7FEDF2DEBED6237B9CC /* MGSwipeTableCell.m */,
-				80F56828517C4DA2BC71928E64C4E139 /* Support Files */,
+				465F2A226BD9AE62202464843203C5B0 /* Frameworks */,
 			);
-			path = MGSwipeTableCell;
+			path = Crashlytics;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -493,7 +529,7 @@
 /* Begin XCBuildConfiguration section */
 		32F5C539A70E8D3C029B86F039CAA32A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3013BAF99B1665C8EC2F640E75C4E8FB /* SSKeychain.xcconfig */;
+			baseConfigurationReference = E0E945753DF2E9CD12913387E9D259E9 /* SSKeychain.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/SSKeychain/SSKeychain-prefix.pch";
@@ -567,7 +603,7 @@
 		};
 		BAA3AE1FEEF4EC3C095EA664FE03720D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3013BAF99B1665C8EC2F640E75C4E8FB /* SSKeychain.xcconfig */;
+			baseConfigurationReference = E0E945753DF2E9CD12913387E9D259E9 /* SSKeychain.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/SSKeychain/SSKeychain-prefix.pch";
@@ -585,7 +621,7 @@
 		};
 		CB5B101707EE5BF75EB170CA0034FAAF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 19F8367BE04111F56A54C22901E64279 /* MGSwipeTableCell.xcconfig */;
+			baseConfigurationReference = 87696C500BEDB8AA1D84FAAAD494156F /* MGSwipeTableCell.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/MGSwipeTableCell/MGSwipeTableCell-prefix.pch";
@@ -620,7 +656,7 @@
 		};
 		DD1982A88C8B0F1893FF4A6D43B0A686 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3E53CBA81CAE94BF29E0D12D0B57BD6D /* CocoaAsyncSocket.xcconfig */;
+			baseConfigurationReference = 3434C56F4FD3CBDC6A7D47647FAE32B9 /* CocoaAsyncSocket.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket-prefix.pch";
@@ -638,7 +674,7 @@
 		};
 		DF207FACF09F16B0A93DF3CA14981BDF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3E53CBA81CAE94BF29E0D12D0B57BD6D /* CocoaAsyncSocket.xcconfig */;
+			baseConfigurationReference = 3434C56F4FD3CBDC6A7D47647FAE32B9 /* CocoaAsyncSocket.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket-prefix.pch";
@@ -656,7 +692,7 @@
 		};
 		F7DD315CF9E526CD08A0CA0B6923A0D0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 19F8367BE04111F56A54C22901E64279 /* MGSwipeTableCell.xcconfig */;
+			baseConfigurationReference = 87696C500BEDB8AA1D84FAAAD494156F /* MGSwipeTableCell.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/MGSwipeTableCell/MGSwipeTableCell-prefix.pch";

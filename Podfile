@@ -1,3 +1,5 @@
 pod 'SSKeychain'
 pod 'MGSwipeTableCell'
 pod 'CocoaAsyncSocket'  
+pod 'Fabric'
+pod 'Crashlytics'

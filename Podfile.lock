@@ -1,15 +1,22 @@
 PODS:
   - CocoaAsyncSocket (7.4.2)
+  - Crashlytics (3.6.0):
+    - Fabric (~> 1.6.3)
+  - Fabric (1.6.5)
   - MGSwipeTableCell (1.5.3)
   - SSKeychain (1.3.1)
 
 DEPENDENCIES:
   - CocoaAsyncSocket
+  - Crashlytics
+  - Fabric
   - MGSwipeTableCell
   - SSKeychain
 
 SPEC CHECKSUMS:
   CocoaAsyncSocket: f5783bdedd232d91b89769bc4b5a1580aed518ad
+  Crashlytics: e4e8d02914f2608fbc7bf42b1a7af838b0db67a2
+  Fabric: 338ffd3c2afcab120638907b4251189de9ad17b3
   MGSwipeTableCell: 5ae3b9a15efda26b201adc8676b24040febe6ff6
   SSKeychain: 04c4ec40f4c3deda524e269bc76e5f30e638a174
 
