@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppDelegate.h"
 
-@interface SettingsViewController : UIViewController
+@interface SettingsViewController : UIViewController<GCDAsyncSocketDelegate>
+
+
+@property (weak, nonatomic) IBOutlet UILabel *label;
+@property (strong, nonatomic) GCDAsyncSocket *clientSocket;
 
 @end

@@ -19,8 +19,8 @@
 		17016DA61C60284B00F95DAE /* FriendsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 17016DA51C60284B00F95DAE /* FriendsTableViewCell.m */; };
 		17016DB01C602D0000F95DAE /* LocalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 17016DAF1C602D0000F95DAE /* LocalTableViewCell.m */; };
 		17016DB41C602E2100F95DAE /* NetworkTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 17016DB31C602E2100F95DAE /* NetworkTableViewCell.m */; };
+		1736497B1C67A8D400D847B7 /* ReceiveSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1736497A1C67A8D400D847B7 /* ReceiveSocket.m */; };
 		179833621C62A29300AE4846 /* shamirSecretShare.c in Sources */ = {isa = PBXBuildFile; fileRef = 179833611C62A29300AE4846 /* shamirSecretShare.c */; };
-		1798336B1C62B06800AE4846 /* file.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1798336A1C62B06800AE4846 /* file.txt */; };
 		3E284F6F3E04FFCA2CBE316D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 230785CF3CD44B261EB4EC0F /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -47,9 +47,10 @@
 		17016DAF1C602D0000F95DAE /* LocalTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalTableViewCell.m; sourceTree = "<group>"; };
 		17016DB21C602E2100F95DAE /* NetworkTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkTableViewCell.h; sourceTree = "<group>"; };
 		17016DB31C602E2100F95DAE /* NetworkTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkTableViewCell.m; sourceTree = "<group>"; };
+		173649791C67A8D400D847B7 /* ReceiveSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReceiveSocket.h; sourceTree = "<group>"; };
+		1736497A1C67A8D400D847B7 /* ReceiveSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceiveSocket.m; sourceTree = "<group>"; };
 		179833611C62A29300AE4846 /* shamirSecretShare.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = shamirSecretShare.c; sourceTree = "<group>"; };
 		179833631C62ABD600AE4846 /* shamirSecretShare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = shamirSecretShare.h; sourceTree = "<group>"; };
-		1798336A1C62B06800AE4846 /* file.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = file.txt; sourceTree = "<group>"; };
 		230785CF3CD44B261EB4EC0F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		32B0F416D9988DA3C5534986 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		3A9EAAFF235A62456A756FFA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -90,7 +91,8 @@
 			children = (
 				17016D831C6005AB00F95DAE /* AppDelegate.h */,
 				17016D841C6005AB00F95DAE /* AppDelegate.m */,
-				1798336A1C62B06800AE4846 /* file.txt */,
+				173649791C67A8D400D847B7 /* ReceiveSocket.h */,
+				1736497A1C67A8D400D847B7 /* ReceiveSocket.m */,
 				179833631C62ABD600AE4846 /* shamirSecretShare.h */,
 				179833611C62A29300AE4846 /* shamirSecretShare.c */,
 				17016D891C6005AB00F95DAE /* Main.storyboard */,
@@ -267,7 +269,6 @@
 			files = (
 				17016D901C6005AB00F95DAE /* LaunchScreen.storyboard in Resources */,
 				17016D8D1C6005AB00F95DAE /* Assets.xcassets in Resources */,
-				1798336B1C62B06800AE4846 /* file.txt in Resources */,
 				17016D8B1C6005AB00F95DAE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,6 +337,7 @@
 				17016DB01C602D0000F95DAE /* LocalTableViewCell.m in Sources */,
 				17016D821C6005AB00F95DAE /* main.m in Sources */,
 				17016D9D1C6022AC00F95DAE /* NetworkViewController.m in Sources */,
+				1736497B1C67A8D400D847B7 /* ReceiveSocket.m in Sources */,
 				179833621C62A29300AE4846 /* shamirSecretShare.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -449,6 +451,7 @@
 			baseConfigurationReference = 32B0F416D9988DA3C5534986 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
@@ -470,7 +473,7 @@
 					"-framework",
 					"\"Security\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.fmi.BeMySharePal;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fmi.mySharePal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -480,6 +483,7 @@
 			baseConfigurationReference = 3A9EAAFF235A62456A756FFA /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
@@ -501,7 +505,7 @@
 					"-framework",
 					"\"Security\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.fmi.BeMySharePal;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fmi.mySharePal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
