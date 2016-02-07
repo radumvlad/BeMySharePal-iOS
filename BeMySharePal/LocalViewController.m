@@ -28,30 +28,30 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    NSURL *pathURL = [[NSBundle mainBundle] URLForResource:@"file" withExtension:@"txt"];
-    NSData *dataFile = [NSData dataWithContentsOfURL:pathURL];
-    
-    AppDelegate *appdelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    
-    NSArray *arr = [appdelegate divideData:dataFile inCount:4];
-    
-    NSData *share1 = arr[0];
-    NSData *share2 = arr[1];
-    
-    NSData *result = [appdelegate reconstructDataFrom:share1 and:share2];
-    
-    NSLog(@"first %@, second %@ are equal - %d", dataFile, result, [result isEqualToData:dataFile]);
-    
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString *filePath = [documentsDirectory stringByAppendingPathComponent:@"reconstruct.txt"];
-    [result writeToFile:filePath atomically:YES];
-    
-    NSString *file1Path = [documentsDirectory stringByAppendingPathComponent:@"share1.txt"];
-    NSString *file2Path = [documentsDirectory stringByAppendingPathComponent:@"share2.txt"];
-    
-    [share1 writeToFile:file1Path atomically:YES];
-    [share2 writeToFile:file2Path atomically:YES];
+//    NSURL *pathURL = [[NSBundle mainBundle] URLForResource:@"file" withExtension:@"txt"];
+//    NSData *dataFile = [NSData dataWithContentsOfURL:pathURL];
+//    
+//    AppDelegate *appdelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+//    
+//    NSArray *arr = [appdelegate divideData:dataFile inCount:4];
+//    
+//    NSData *share1 = arr[0];
+//    NSData *share2 = arr[1];
+//    
+//    NSData *result = [appdelegate reconstructDataFrom:share1 and:share2];
+//    
+//    NSLog(@"first %@, second %@ are equal - %d", dataFile, result, [result isEqualToData:dataFile]);
+//    
+//    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+//    NSString *documentsDirectory = [paths objectAtIndex:0];
+//    NSString *filePath = [documentsDirectory stringByAppendingPathComponent:@"reconstruct.txt"];
+//    [result writeToFile:filePath atomically:YES];
+//    
+//    NSString *file1Path = [documentsDirectory stringByAppendingPathComponent:@"share1.txt"];
+//    NSString *file2Path = [documentsDirectory stringByAppendingPathComponent:@"share2.txt"];
+//    
+//    [share1 writeToFile:file1Path atomically:YES];
+//    [share2 writeToFile:file2Path atomically:YES];
 }
 
 - (void)refreshLocalFilesArray {
