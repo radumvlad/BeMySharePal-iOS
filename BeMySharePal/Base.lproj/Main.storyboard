@@ -51,8 +51,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zkW-IG-gNX">
-                                                    <rect key="frame" x="24" y="22" width="258" height="0.0"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zkW-IG-gNX">
+                                                    <rect key="frame" x="24" y="22" width="0.0" height="0.0"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -79,7 +79,7 @@
                                     <constraint firstAttribute="height" constant="40" id="SHF-SJ-33j"/>
                                     <constraint firstAttribute="width" constant="40" id="yXG-YO-Z2h"/>
                                 </constraints>
-                                <state key="normal" image="Plus Math-52"/>
+                                <state key="normal" image="plus"/>
                                 <connections>
                                     <action selector="addFriend:" destination="Gqi-LV-1FQ" eventType="touchUpInside" id="tOw-A8-RdS"/>
                                 </connections>
@@ -311,11 +311,11 @@
     </scenes>
     <resources>
         <image name="MAPPING_logo_HQ" width="2576" height="1342"/>
-        <image name="Plus Math-52" width="26" height="26"/>
         <image name="friends" width="30" height="30"/>
         <image name="local" width="30" height="30"/>
         <image name="logof" width="171" height="171"/>
         <image name="network" width="30" height="30"/>
+        <image name="plus" width="48" height="48"/>
         <image name="settings" width="30" height="30"/>
     </resources>
 </document>
