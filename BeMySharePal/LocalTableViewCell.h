@@ -10,8 +10,17 @@
 #import <MGSwipeTableCell/MGSwipeTableCell.h>
 
 
+@protocol LocalTableViewCellDelegate <NSObject>
+
+- (void)shareFailed;
+
+@end
+
+
 @interface LocalTableViewCell : MGSwipeTableCell
 
+
+@property (strong, nonatomic) id<LocalTableViewCellDelegate> localTableCellDelegate;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UIButton *shareButton;
 

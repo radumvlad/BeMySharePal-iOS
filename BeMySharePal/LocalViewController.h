@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "LocalTableViewCell.h"
 
-@interface LocalViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+@interface LocalViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, LocalTableViewCellDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 

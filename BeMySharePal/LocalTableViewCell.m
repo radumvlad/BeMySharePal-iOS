@@ -25,14 +25,8 @@
     AppDelegate *appdelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     
     if ([appdelegate.friends count] < 2) {
-//        
-//        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Alert" message:@"You need at least 2 friends to share this file!" preferredStyle:UIAlertControllerStyleAlert];
-//        
-//        UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
-//        [alertController addAction:ok];
-//        
-//        [self presentViewController:alertController animated:YES completion:nil];
         
+        [self.localTableCellDelegate shareFailed];
         return;
     }
     

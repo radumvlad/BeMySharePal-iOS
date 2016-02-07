@@ -61,7 +61,6 @@
 
 - (void)socketDidDisconnect:(GCDAsyncSocket *)sock withError:(NSError *)err {
     NSLog(@"socketDidDisconnect:%p withError: %@", sock, err);
-    //    self.label.text = @"Disconnected";
 }
 
 

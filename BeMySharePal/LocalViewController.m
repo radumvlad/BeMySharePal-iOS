@@ -20,38 +20,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    
     [self refreshLocalFilesArray];
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(refreshLocalFilesArray)
                                                  name:NEW_FILE_NOTIFICATION object:nil];
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-//    NSURL *pathURL = [[NSBundle mainBundle] URLForResource:@"file" withExtension:@"txt"];
-//    NSData *dataFile = [NSData dataWithContentsOfURL:pathURL];
-//    
-//    AppDelegate *appdelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-//    
-//    NSArray *arr = [appdelegate divideData:dataFile inCount:4];
-//    
-//    NSData *share1 = arr[0];
-//    NSData *share2 = arr[1];
-//    
-//    NSData *result = [appdelegate reconstructDataFrom:share1 and:share2];
-//    
-//    NSLog(@"first %@, second %@ are equal - %d", dataFile, result, [result isEqualToData:dataFile]);
-//    
-//    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-//    NSString *documentsDirectory = [paths objectAtIndex:0];
-//    NSString *filePath = [documentsDirectory stringByAppendingPathComponent:@"reconstruct.txt"];
-//    [result writeToFile:filePath atomically:YES];
-//    
-//    NSString *file1Path = [documentsDirectory stringByAppendingPathComponent:@"share1.txt"];
-//    NSString *file2Path = [documentsDirectory stringByAppendingPathComponent:@"share2.txt"];
-//    
-//    [share1 writeToFile:file1Path atomically:YES];
-//    [share2 writeToFile:file2Path atomically:YES];
 }
 
 - (void)refreshLocalFilesArray {
@@ -147,7 +124,22 @@
     cell.rightButtons = @[deleteButton];
     cell.rightSwipeSettings.transition = MGSwipeTransition3D;
     
+    cell.localTableCellDelegate = self;
+    
     return cell;
+}
+
+#pragma mark LocalTableViewCellDelegate
+
+- (void)shareFailed {
+    
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Alert" message:@"You need at least 2 friends to share this file!" preferredStyle:UIAlertControllerStyleAlert];
+
+    UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+    [alertController addAction:ok];
+
+    [self presentViewController:alertController animated:YES completion:nil];
+    
 }
 
 @end
