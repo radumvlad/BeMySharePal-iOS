@@ -72,7 +72,6 @@
         
         [[NSNotificationCenter defaultCenter] postNotificationName: NEW_FILE_NOTIFICATION object:nil];
     }
-    
 
     return YES;
 }

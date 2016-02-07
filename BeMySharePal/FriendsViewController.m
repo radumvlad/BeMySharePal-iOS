@@ -36,7 +36,6 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    
     FriendsTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"FriendsTableViewCell"];
     
     if (cell == nil){

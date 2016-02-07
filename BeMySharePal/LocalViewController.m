@@ -31,6 +31,10 @@
                                                  name:NEW_FILE_NOTIFICATION object:nil];
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (void)refreshLocalFilesArray {
     
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
