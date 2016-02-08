@@ -22,7 +22,7 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    
+    [self refreshFriends:nil];
 }
 
 
@@ -30,6 +30,11 @@
     
     AppDelegate *appdelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     return [appdelegate.friends count];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return 50;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -45,6 +50,23 @@
     AppDelegate *appdelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     FriendSocket *fs = appdelegate.friends[indexPath.row];
     cell.titleLabel.text = fs.name;
+    
+    switch (fs.lastState) {
+        case FriendStateUndefined:
+            [cell.stateButton setImage:nil forState:UIControlStateNormal];
+            break;
+        case FriendStateConnected:
+            [cell.stateButton setImage:[UIImage imageNamed:@"check"] forState:UIControlStateNormal];
+            break;
+        case FriendStateDisconnected:
+            [cell.stateButton setImage:[UIImage imageNamed:@"warning"] forState:UIControlStateNormal];
+            break;
+        case FriendStateError:
+            [cell.stateButton setImage:[UIImage imageNamed:@"delete"] forState:UIControlStateNormal];
+            break;
+        default:
+            break;
+    }
     
     MGSwipeButton *deleteButton = [MGSwipeButton buttonWithTitle:@"Delete" backgroundColor:[UIColor redColor] callback:^BOOL(MGSwipeTableCell *sender) {
         
@@ -64,8 +86,53 @@
     cell.rightButtons = @[deleteButton];
     cell.rightSwipeSettings.transition = MGSwipeTransition3D;
     
-    
     return cell;
+}
+
+- (IBAction)refreshFriends:(id)sender {
+    
+    AppDelegate *appdelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    
+    for (FriendSocket *friendSocket in appdelegate.friends) {
+        
+        friendSocket.lastState = FriendStateUndefined;
+        
+        if ([friendSocket.socket isConnected]) {
+            [friendSocket.socket disconnect];
+        }
+        
+        __weak FriendSocket *weakFriendSocket = friendSocket;
+        
+        NSError *error = nil;
+        friendSocket.connectCallback = ^{
+            
+            if (weakFriendSocket.lastState == FriendStateUndefined) {
+                weakFriendSocket.lastState = FriendStateConnected;
+            }
+            
+            [self.tableView reloadData];
+        };
+        
+        friendSocket.disconnectCallback = ^{
+            if (weakFriendSocket.lastState == FriendStateUndefined) {
+                weakFriendSocket.lastState = FriendStateDisconnected;
+            }
+            
+            [self.tableView reloadData];
+        };
+        
+        
+        if (! [friendSocket.socket connectToHost:friendSocket.host onPort:PORT withTimeout:5.0 error:&error]) {
+            
+            NSLog(@"Error connecting: %@", error);
+            
+            if (weakFriendSocket.lastState == FriendStateUndefined) {
+                weakFriendSocket.lastState = FriendStateError;
+            }
+        }
+    }
+    
+    [self.tableView reloadData];
 }
 
 - (IBAction)addFriend:(id)sender {
@@ -91,7 +158,7 @@
         [appdelegate saveFriends];
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            [self.tableView reloadData];
+            [self refreshFriends:nil];
         });
         
     }];

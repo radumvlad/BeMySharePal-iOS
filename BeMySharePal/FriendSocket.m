@@ -75,6 +75,10 @@
 }
 
 - (void)socketDidDisconnect:(GCDAsyncSocket *)sock withError:(NSError *)err {
+    
+    if (self.disconnectCallback) {
+        self.disconnectCallback();
+    }
     NSLog(@"socketDidDisconnect:%p withError: %@", sock, err);
 }
 
