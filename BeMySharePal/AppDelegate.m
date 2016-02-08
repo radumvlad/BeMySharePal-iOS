@@ -26,9 +26,6 @@
     
     [self createFolder:@"Network/"];
     [self createFolder:@"Local/"];
-    
-    [self startServer];
-    self.incomingParteners = [NSMutableArray new];
     [self getFriends];
     
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -38,14 +35,11 @@
     return YES;
 }
 
-- (void)incomingSocketDidDisconnect:(NSNotification *)notification {
-    
-    [self.incomingParteners removeObject:notification.object];
-}
-
 - (void)applicationWillResignActive:(UIApplication *)application {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+    
+    NSLog(@"applicationWillResignActive");
+    
+    self.serverSocket = nil;
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
@@ -58,7 +52,9 @@
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
+    [self refreshServer];
+    self.incomingParteners = [NSMutableArray new];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
@@ -78,6 +74,8 @@
     return YES;
 }
 
+#pragma mark helper method to create folder
+
 - (void)createFolder:(NSString *)folderName {
     NSError *error;
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -89,7 +87,9 @@
     }
 }
 
-- (void)startServer {
+#pragma mark Server Socket and its Delegate
+
+- (void)refreshServer {
     
     self.serverSocket = [[GCDAsyncSocket alloc] initWithDelegate:self delegateQueue:dispatch_get_main_queue()];
     
@@ -102,8 +102,10 @@
     NSLog(@"Started server with host %@", [self getIPAddress:YES]);
 }
 
-
-#pragma mark Socket Delegate
+- (void)incomingSocketDidDisconnect:(NSNotification *)notification {
+    
+    [self.incomingParteners removeObject:notification.object];
+}
 
 - (void)socket:(GCDAsyncSocket *)sender didAcceptNewSocket:(GCDAsyncSocket *)newSocket {
     NSLog(@"didAcceptNewSocket");
@@ -114,10 +116,9 @@
     
     [self.incomingParteners addObject:receivedSocket];
     [receivedSocket.socket readDataWithTimeout:20 tag:0];
-    
-    
 }
 
+#pragma mark Shamir's Secret Share
 
 - (NSArray *)divideData:(NSData *)buffData inCount:(int) numberOfDivisions {
     
@@ -147,6 +148,7 @@
     return [NSData dataWithBytes:result length:strlen(result)];
 }
 
+#pragma mark Local IP helpers
 
 - (NSString *)getIPAddress:(BOOL)preferIPv4 {
     NSArray *searchArray = preferIPv4 ?
@@ -203,6 +205,8 @@
     
     return [addresses count] ? addresses : nil;
 }
+
+#pragma mark Friends usage models
 
 - (void)saveFriends {
     
