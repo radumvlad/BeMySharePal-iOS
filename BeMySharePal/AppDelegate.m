@@ -24,6 +24,9 @@
     
     [Fabric with:@[[Crashlytics class]]];
     
+    [self createFolder:@"Network/"];
+    [self createFolder:@"Local/"];
+    
     [self startServer];
     self.incomingParteners = [NSMutableArray new];
     [self getFriends];
@@ -73,6 +76,17 @@
     }
 
     return YES;
+}
+
+- (void)createFolder:(NSString *)folderName {
+    NSError *error;
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *inboxFolder = [documentsDirectory stringByAppendingPathComponent:folderName];
+    
+    if (![[NSFileManager defaultManager] fileExistsAtPath:inboxFolder]) {
+        [[NSFileManager defaultManager] createDirectoryAtPath:inboxFolder withIntermediateDirectories:NO attributes:nil error:&error];
+    }
 }
 
 - (void)startServer {

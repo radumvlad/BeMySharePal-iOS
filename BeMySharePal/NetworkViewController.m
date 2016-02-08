@@ -68,9 +68,6 @@
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(receivedFileRequest:)
                                                  name:REQUESTED_FILE_RECEIVED object:nil];
-
-   
-    
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -81,7 +78,7 @@
     
     NSDictionary *newFileReceived = notification.object;
     
-    if (self.currentFileModel == nil || self.currentFileModel.title != newFileReceived[@"filename"]) {
+    if (self.currentFileModel == nil || ![self.currentFileModel.title isEqualToString: newFileReceived[@"filename"]]) {
         
         self.currentFileModel = [FileModel new];
         self.currentFileModel.title = newFileReceived[@"filename"];
@@ -94,14 +91,15 @@
         
         AppDelegate *appdelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
         
-        NSData *share1 = self.currentFileModel.references[0];
-        NSData *share2 = self.currentFileModel.references[1];
-    
+        NSData *share1 = [[NSData alloc] initWithBase64EncodedString:self.currentFileModel.references[0] options:0];
+        NSData *share2 = [[NSData alloc] initWithBase64EncodedString:self.currentFileModel.references[1] options:0];
+        
         NSData *result = [appdelegate reconstructDataFrom:share1 and:share2];
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *documentsDirectory = [paths objectAtIndex:0];
-        NSString *filePath = [documentsDirectory stringByAppendingPathComponent:self.currentFileModel.title];
-        [result writeToFile:filePath atomically:YES];
+        
+        NSString *finalPath = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat: @"Local/%@", self.currentFileModel.title]];
+        [result writeToFile:finalPath atomically:YES];
     }
 }
 
@@ -120,6 +118,8 @@
             numberOfApparitions = [self.networkFilesDictionary[str][@"aparitions"] integerValue];
             references = self.networkFilesDictionary[str][@"friends"];
         }
+        
+        numberOfApparitions++;
         
         [references addObject: dict[@"friend"]];
         

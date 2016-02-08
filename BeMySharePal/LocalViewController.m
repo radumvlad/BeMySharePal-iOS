@@ -41,8 +41,23 @@
     NSString *documentsDirectory = [paths objectAtIndex:0];
     
     NSString *inboxDirectory = [NSString stringWithFormat:@"%@/Inbox", documentsDirectory];
+    NSString *localDirectory = [NSString stringWithFormat:@"%@/Local", documentsDirectory];
     
-    self.localResourcesArray = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:inboxDirectory
+    NSArray *inboxContent = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:inboxDirectory error:NULL];
+    
+    
+    for (NSString *filename in inboxContent) {
+        
+        NSString *filePath = [NSString stringWithFormat:@"%@/%@", inboxDirectory, filename];
+        NSString *newFilePath = [NSString stringWithFormat:@"%@/%@", localDirectory, filename];
+        
+        [[NSFileManager defaultManager] copyItemAtPath:filePath toPath:newFilePath error:nil];
+        
+        NSLog(@"Deleting file at path %@", filePath);
+        [[NSFileManager defaultManager] removeItemAtPath:filePath error:nil];
+    }
+        
+    self.localResourcesArray = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:localDirectory
                                                                                    error:NULL].mutableCopy;
     
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -70,10 +85,11 @@
     
     MGSwipeButton *shareButton = [MGSwipeButton buttonWithTitle:@"Load" backgroundColor:[UIColor blueColor] callback:^BOOL(MGSwipeTableCell *sender) {
 
+        
         NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *documentsDirectory = [paths objectAtIndex:0];
-        NSString *inboxDirectory = [NSString stringWithFormat:@"%@/Inbox", documentsDirectory];
+        NSString *inboxDirectory = [NSString stringWithFormat:@"%@/Local", documentsDirectory];
         NSString *filePath = [NSString stringWithFormat:@"%@/%@", inboxDirectory, self.localResourcesArray[indexPath.row]];
         
         NSURL *url = [NSURL fileURLWithPath:filePath];
@@ -95,7 +111,7 @@
 
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *documentsDirectory = [paths objectAtIndex:0];
-        NSString *inboxDirectory = [NSString stringWithFormat:@"%@/Inbox", documentsDirectory];
+        NSString *inboxDirectory = [NSString stringWithFormat:@"%@/Local", documentsDirectory];
         NSString *filePath = [NSString stringWithFormat:@"%@/%@", inboxDirectory, self.localResourcesArray[indexPath.row]];
 
         NSLog(@"Deleting file at path %@", filePath);

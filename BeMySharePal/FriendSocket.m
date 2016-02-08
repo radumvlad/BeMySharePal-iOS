@@ -47,7 +47,6 @@
 - (void)socket:(GCDAsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag {
     NSLog(@"socket:%p didReadData:withTag:%ld", sock, tag);
     
-   
     NSError *error = nil;
     NSDictionary *myDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
     
@@ -73,7 +72,6 @@
         
         [[NSNotificationCenter defaultCenter] postNotificationName: NEW_NETWORK_FILES object:dict];
     }
-    
 }
 
 - (void)socketDidDisconnect:(GCDAsyncSocket *)sock withError:(NSError *)err {
