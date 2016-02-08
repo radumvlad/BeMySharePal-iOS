@@ -26,8 +26,7 @@
     
     [self startServer];
     self.incomingParteners = [NSMutableArray new];
-    
-    self.friends = [NSMutableArray new];
+    [self getFriends];
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(incomingSocketDidDisconnect:)
@@ -191,5 +190,32 @@
     return [addresses count] ? addresses : nil;
 }
 
+- (void)saveFriends {
+    
+    NSMutableArray *friendsDataArray = [NSMutableArray new];
+    
+    for(int i = 0; i < [self.friends count]; i++) {
+        FriendSocket *friend = self.friends[i];
+        NSData *archive = [NSKeyedArchiver archivedDataWithRootObject:friend];
+        [friendsDataArray addObject:archive];
+    }
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:friendsDataArray forKey:@"friendsArray"];
+    [defaults synchronize];
+}
+
+- (void)getFriends {
+    
+    self.friends = [NSMutableArray new];
+    
+    NSMutableArray *friendsDataArray = [[NSUserDefaults standardUserDefaults] objectForKey:@"friendsArray"];
+
+    for (NSData *archive in friendsDataArray) {
+        FriendSocket *newSocket = (FriendSocket *)[NSKeyedUnarchiver unarchiveObjectWithData:archive];
+        newSocket.socket = [[GCDAsyncSocket alloc] initWithDelegate:newSocket delegateQueue:dispatch_get_main_queue()];
+        [self.friends addObject:newSocket];
+    }
+}
 
 @end

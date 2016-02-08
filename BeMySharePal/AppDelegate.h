@@ -40,6 +40,7 @@
 - (NSData *)reconstructDataFrom:(NSData *)data1 and:(NSData *)data2;
 
 - (NSString *)getIPAddress:(BOOL)preferIPv4;
+- (void)saveFriends;
 
 @end
 

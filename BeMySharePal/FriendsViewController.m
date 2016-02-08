@@ -11,7 +11,6 @@
 
 @interface FriendsViewController ()
 
-@property (nonatomic, strong) NSArray *friendsArray;
 @property (nonatomic) UITextField *alertTextField;
 
 @end
@@ -20,9 +19,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    AppDelegate *appdelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    self.friendsArray = appdelegate.friends;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -31,7 +27,9 @@
 
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return [self.friendsArray count];
+    
+    AppDelegate *appdelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    return [appdelegate.friends count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -44,39 +42,75 @@
         cell = [self.tableView dequeueReusableCellWithIdentifier:@"FriendsTableViewCell"];
     }
     
-    FriendSocket *fs = self.friendsArray[indexPath.row];
-    cell.titleLabel.text = fs.host;
+    AppDelegate *appdelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    FriendSocket *fs = appdelegate.friends[indexPath.row];
+    cell.titleLabel.text = fs.name;
+    
+    MGSwipeButton *deleteButton = [MGSwipeButton buttonWithTitle:@"Delete" backgroundColor:[UIColor redColor] callback:^BOOL(MGSwipeTableCell *sender) {
+        
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+        
+        AppDelegate *appdelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+        [appdelegate.friends removeObjectAtIndex:indexPath.row];
+        [appdelegate saveFriends];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadData];
+        });
+        
+        return YES;
+    }];
+    
+    cell.rightButtons = @[deleteButton];
+    cell.rightSwipeSettings.transition = MGSwipeTransition3D;
+    
     
     return cell;
 }
 
 - (IBAction)addFriend:(id)sender {
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Local IP" message:@"Enter your friend's local ip address:" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok", nil];
-    alertView.alertViewStyle = UIAlertViewStylePlainTextInput;
     
-    alertView.delegate = self;
+    __block UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Add friend" message:@"Please specify your friend's informations!" preferredStyle:UIAlertControllerStyleAlert];
     
-    [alertView show];
-}
-
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    
-    
-    if (buttonIndex == 1) {
-        UITextField *passwordTextField = [alertView textFieldAtIndex:0];
-        
+    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         FriendSocket *fs2 = [FriendSocket new];
-        fs2.host = passwordTextField.text;
         fs2.socket = [[GCDAsyncSocket alloc] initWithDelegate:fs2 delegateQueue:dispatch_get_main_queue()];
+        
+        for (UITextField *textField in alertController.textFields) {
+            
+            if (textField.tag == 1) {
+                fs2.name = textField.text;
+            }
+            else if(textField.tag == 2) {
+                fs2.host = textField.text;
+            }
+        }
         
         AppDelegate *appdelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
         [appdelegate.friends addObject:fs2];
-    }
+        [appdelegate saveFriends];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadData];
+        });
+        
+    }];
     
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self.tableView reloadData];
-    });
-
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil];
+    [alertController addAction:ok];
+    [alertController addAction:cancel];
+    [alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        textField.tag = 1;
+        textField.placeholder = @"Name";
+    }];
+    
+    [alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        textField.tag = 2;
+        textField.placeholder = @"Local IP";
+        textField.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
+    }];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
 }
 
 @end

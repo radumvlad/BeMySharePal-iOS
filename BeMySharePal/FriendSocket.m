@@ -11,6 +11,24 @@
 @implementation FriendSocket
 
 
+- (void)encodeWithCoder:(NSCoder *)encoder {
+    
+    [encoder encodeObject:self.host forKey:@"host"];
+    [encoder encodeObject:self.name forKey:@"name"];
+}
+
+
+- (id)initWithCoder:(NSCoder *)decoder {
+    if (self = [super init]) {
+        
+        self.host = [decoder decodeObjectForKey:@"host"];
+        self.name = [decoder decodeObjectForKey:@"name"];
+    }
+    
+    return self;
+}
+
+
 #pragma mark Socket Delegate
 
 - (void)socket:(GCDAsyncSocket *)sock didConnectToHost:(NSString *)host port:(UInt16)port {
@@ -57,7 +75,6 @@
     }
     
 }
-
 
 - (void)socketDidDisconnect:(GCDAsyncSocket *)sock withError:(NSError *)err {
     NSLog(@"socketDidDisconnect:%p withError: %@", sock, err);
